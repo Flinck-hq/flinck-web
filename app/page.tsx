@@ -29,7 +29,7 @@ export default function Home() {
           "service_askuuya",
           "template_nbn335s",
           templateParams,
-          "wORoOMNRIZqTEkL",
+          "w0Ro0MNRiIZqTEkLQ",
         )
         .then(
           (response: any) => {
