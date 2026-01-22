@@ -3,6 +3,7 @@
 import React from "react"
 
 import { useState } from 'react'
+import emailjs from 'emailjs/browser'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Leaf, TrendingUp, Users, MessageSquare, BarChart3, Share2, Smartphone } from 'lucide-react'
@@ -14,7 +15,13 @@ export default function Home() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (email.trim()) {
-      console.log('orm submitted with email:', email)
+      const templateParams = { user_email: email }
+      emailjs.send('service_askuuya', 'template_nbn335s', templateParams)
+        .then((response: any) => {
+          console.log('SUCCESS!', response.status, response.text)
+        }, (err: any) => {
+          console.log('FAILED...', err)
+        })
       setSubmitted(true)
       setEmail('')
       setTimeout(() => setSubmitted(false), 3000)
