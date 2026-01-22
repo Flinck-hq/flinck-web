@@ -14,7 +14,7 @@ export default function Home() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (email.trim()) {
-      console.log('[v0] Form submitted with email:', email)
+      console.log('orm submitted with email:', email)
       setSubmitted(true)
       setEmail('')
       setTimeout(() => setSubmitted(false), 3000)
@@ -241,7 +241,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12 bg-card border-t border-border text-center text-muted-foreground">
         <div className="max-w-6xl mx-auto">
-          <p className="text-base sm:text-lg font-medium">Flink — Built for farmers. Powered by technology.</p>
+          <p className="text-base sm:text-lg font-medium">Flink, Built for farmers. From K09D</p>
           <p className="text-sm mt-2">Empowering smallholder farmers across Africa with information and market access.</p>
         </div>
       </footer>
