@@ -16,7 +16,7 @@ export default function Home() {
     e.preventDefault()
     if (email.trim()) {
       const templateParams = { user_email: email }
-      emailjs.send('service_askuuya', 'template_nbn335s', templateParams)
+      emailjs.send('service_askuuya', 'template_nbn335s', templateParams, 'wORoOMNRIZqTEkL')
         .then((response: any) => {
           console.log('SUCCESS!', response.status, response.text)
         }, (err: any) => {
