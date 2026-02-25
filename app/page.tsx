@@ -167,7 +167,7 @@ export default function Home() {
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-[#4ae08f]/15 blur-2xl" />
             <img
-              src="https://coprvy.com/new-hero.png"
+              src="../public/flink.jpg"
               alt="Flink app experience"
               className="relative mx-auto w-full max-w-md rounded-[2rem] border border-white/10 bg-[#0a2115] p-2 shadow-2xl"
             />
@@ -256,7 +256,9 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.15em] text-white/60">
               Flink Wallet
             </p>
-            <h3 className="mt-2 text-2xl font-semibold">Value Backed by Work</h3>
+            <h3 className="mt-2 text-2xl font-semibold">
+              Value Backed by Work
+            </h3>
             <p className="mt-3 text-white/70">
               Store earnings, swap smoothly, and plan the next season with clear
               cashflow visibility.
@@ -274,8 +276,8 @@ export default function Home() {
             </p>
             <h3 className="mt-2 text-2xl font-semibold">Spend in Real Life</h3>
             <p className="mt-3 text-white/70">
-              Convert farm income into daily spending with a card-friendly payout
-              experience.
+              Convert farm income into daily spending with a card-friendly
+              payout experience.
             </p>
             <img
               src="https://coprvy.com/card.png"
