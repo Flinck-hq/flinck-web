@@ -17,37 +17,48 @@ export default function Home() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (loading) return;
 
     if (!name.trim() || !email.trim()) {
+      setError("Name and email are required.");
       return;
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if (!emailRegex.test(email.trim())) {
+      setError("Please enter a valid email address.");
+      return;
+    }
+
+    setError("");
     const templateParams = {
       user_name: name,
       user_email: email,
     };
 
-    emailjs
-      .send(
+    setLoading(true);
+    try {
+      await emailjs.send(
         "service_askuuya",
         "template_nbn335s",
         templateParams,
         "w0Ro0MNRiIZqTEkLQ",
-      )
-      .then(
-        () => {
-          setSubmitted(true);
-          setName("");
-          setEmail("");
-          setTimeout(() => setSubmitted(false), 3000);
-        },
-        (err: unknown) => {
-          console.log("FAILED...", err);
-        },
       );
+      setSubmitted(true);
+      setName("");
+      setEmail("");
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (err: unknown) {
+      console.log("FAILED...", err);
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const features = [
@@ -84,7 +95,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#081c12] text-foreground">
+    <main className="min-h-screen bg-background text-foreground">
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -119,7 +130,10 @@ export default function Home() {
               type="text"
               placeholder="Enter your name"
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => {
+                setName(e.target.value);
+                if (error) setError("");
+              }}
               required
               className="h-12 text-base"
             />
@@ -127,19 +141,27 @@ export default function Home() {
               type="email"
               placeholder="Enter your email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                if (error) setError("");
+              }}
               required
               className="h-12 text-base"
             />
             <Button
               type="submit"
               className="h-12 px-6 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold whitespace-nowrap"
-              disabled={submitted}
+              disabled={submitted || loading}
             >
-              {submitted ? "✓ Joined!" : "Join the Waiting List"}
+              {loading
+                ? "Submitting..."
+                : submitted
+                  ? "✓ Joined!"
+                  : "Join the Waiting List"}
             </Button>
           </form>
 
+          {error && <p className="text-sm text-red-500 mt-4">{error}</p>}
           {submitted && (
             <p className="text-sm text-accent mt-4 animate-pulse">
               Thank you! Check your email soon.
@@ -317,7 +339,10 @@ export default function Home() {
               type="text"
               placeholder="Enter your name"
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => {
+                setName(e.target.value);
+                if (error) setError("");
+              }}
               required
               className="h-12 text-base bg-primary-foreground text-foreground placeholder:text-muted-foreground"
             />
@@ -325,18 +350,28 @@ export default function Home() {
               type="email"
               placeholder="Enter your email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                if (error) setError("");
+              }}
               required
               className="h-12 text-base bg-primary-foreground text-foreground placeholder:text-muted-foreground"
             />
             <Button
               type="submit"
               className="h-12 px-6 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold whitespace-nowrap"
-              disabled={submitted}
+              disabled={submitted || loading}
             >
-              {submitted ? "✓ Joined!" : "Get Early Access"}
+              {loading
+                ? "Submitting..."
+                : submitted
+                  ? "✓ Joined!"
+                  : "Get Early Access"}
             </Button>
           </form>
+          {error && (
+            <p className="text-sm text-red-300 mt-4">{error}</p>
+          )}
         </div>
       </section>
 
