@@ -1,342 +1,334 @@
 "use client";
 
-import React from "react";
-
-import { useState } from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
-  Leaf,
-  TrendingUp,
-  Users,
-  MessageSquare,
+  ArrowUpRight,
   BarChart3,
-  Share2,
-  Smartphone,
+  Leaf,
+  MessageSquare,
+  Sprout,
+  Store,
 } from "lucide-react";
 
+type WaitlistFormProps = {
+  submitted: boolean;
+  onSubmit: (event: React.FormEvent) => void;
+  email: string;
+  name: string;
+  setEmail: React.Dispatch<React.SetStateAction<string>>;
+  setName: React.Dispatch<React.SetStateAction<string>>;
+  buttonLabel: string;
+  stacked?: boolean;
+};
+
+function WaitlistForm({
+  submitted,
+  onSubmit,
+  email,
+  name,
+  setEmail,
+  setName,
+  buttonLabel,
+  stacked = false,
+}: WaitlistFormProps) {
+  return (
+    <form
+      onSubmit={onSubmit}
+      className={`w-full ${stacked ? "max-w-lg" : "max-w-xl"} ${stacked ? "space-y-3" : "grid gap-3 sm:grid-cols-2"}`}
+    >
+      <Input
+        type="text"
+        placeholder="Full name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        required
+        className="h-12 border-white/20 bg-white/5 text-white placeholder:text-white/60"
+      />
+      <Input
+        type="email"
+        placeholder="Email address"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+        className="h-12 border-white/20 bg-white/5 text-white placeholder:text-white/60"
+      />
+      <Button
+        type="submit"
+        disabled={submitted}
+        className={`h-12 ${stacked ? "w-full" : "sm:col-span-2"} bg-[#4ae08f] text-[#052016] hover:bg-[#68eea4] font-semibold`}
+      >
+        {submitted ? "✓ Joined!" : buttonLabel}
+      </Button>
+    </form>
+  );
+}
+
 export default function Home() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email.trim()) {
-      const templateParams = { user_email: email };
-      emailjs
-        .send(
-          "service_askuuya",
-          "template_nbn335s",
-          templateParams,
-          "w0Ro0MNRiIZqTEkLQ",
-        )
-        .then(
-          (response: any) => {
-            console.log("SUCCESS!", response.status, response.text);
-          },
-          (err: any) => {
-            console.log("FAILED...", err);
-          },
-        );
-      setSubmitted(true);
-      setEmail("");
-      setTimeout(() => setSubmitted(false), 3000);
+
+    if (!name.trim() || !email.trim()) {
+      return;
     }
+
+    const templateParams = {
+      user_name: name,
+      user_email: email,
+    };
+
+    emailjs
+      .send(
+        "service_askuuya",
+        "template_nbn335s",
+        templateParams,
+        "w0Ro0MNRiIZqTEkLQ",
+      )
+      .then(
+        () => {
+          setSubmitted(true);
+          setName("");
+          setEmail("");
+          setTimeout(() => setSubmitted(false), 3000);
+        },
+        (err: unknown) => {
+          console.log("FAILED...", err);
+        },
+      );
   };
 
-  const features = [
+  const quickActions = [
     {
-      icon: TrendingUp,
-      title: "Crop Recommendations",
-      description: "Based on location and season",
-    },
-    {
-      icon: Leaf,
-      title: "Farming Best Practices",
-      description: "Practical guidance you can use today",
-    },
-    {
-      icon: BarChart3,
-      title: "Market Visibility",
-      description: "Nearby market demand and price updates",
-    },
-    {
-      icon: Users,
-      title: "Direct Sales",
-      description: "Buy and sell agricultural produce directly",
+      icon: Sprout,
+      title: "Crop Guide",
+      text: "Get planting recommendations",
+      color: "bg-[#d8f4e2] text-[#1f7a45]",
     },
     {
       icon: MessageSquare,
-      title: "AI Farming Assistant",
-      description: "Chat-based answers to farming questions",
+      title: "AI Assistant",
+      text: "Get farming advice",
+      color: "bg-[#d6e4ff] text-[#2959c7]",
     },
     {
-      icon: Share2,
-      title: "Farmer Knowledge",
-      description: "Articles and insights from the community",
+      icon: Store,
+      title: "Market Place",
+      text: "Check current prices",
+      color: "bg-[#f8edd0] text-[#ab6a05]",
+    },
+    {
+      icon: BarChart3,
+      title: "Knowledge Hub",
+      text: "Read farming articles",
+      color: "bg-[#eddcfa] text-[#7d2db2]",
     },
   ];
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <Leaf className="w-5 h-5 text-primary-foreground" />
+    <main className="min-h-screen bg-[#081c12] text-white">
+      <section className="relative overflow-hidden border-b border-white/10 bg-[#07170f]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(70,197,126,0.2)_0%,_transparent_60%)]" />
+        <div className="relative mx-auto grid w-full max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.1fr_0.9fr] md:items-center lg:px-8 lg:py-20">
+          <div>
+            <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/20 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white/80">
+              <Leaf className="h-4 w-4 text-[#4ae08f]" /> Flink
+            </p>
+            <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+              Farm smarter. Earn faster. Sell with confidence.
+            </h1>
+            <p className="mt-5 max-w-xl text-base text-white/75 sm:text-lg">
+              Flink gives every farmer clear guidance, verified prices, and
+              instant support in one mobile-first experience.
+            </p>
+            <div className="mt-8">
+              <WaitlistForm
+                submitted={submitted}
+                onSubmit={handleSubmit}
+                email={email}
+                name={name}
+                setEmail={setEmail}
+                setName={setName}
+                buttonLabel="Join the Waiting List"
+              />
             </div>
-            <span className="font-bold text-lg text-foreground">Flink</span>
+            {submitted && (
+              <p className="mt-3 text-sm text-[#87f9b8]">
+                Thanks, you are on the list.
+              </p>
+            )}
           </div>
-          <p className="text-sm text-muted-foreground hidden sm:block">
-            Built for farmers. Powered by technology.
-          </p>
-        </div>
-      </nav>
 
-      {/* Hero Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 bg-gradient-to-b from-background via-accent/5 to-background">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-tight mb-6">
-            <span className="text-balance">
-              Smarter Farming Starts with Better Information
-            </span>
-          </h1>
-          <p className="text-lg sm:text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto text-balance">
-            Flink helps smallholder farmers decide what to plant, when to plant,
-            and where to sell — using practical insights and market access.
-          </p>
-
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-          >
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="flex-1 h-12 text-base"
+          <div className="relative">
+            <div className="absolute -inset-4 rounded-[2rem] bg-[#4ae08f]/15 blur-2xl" />
+            <img
+              src="https://coprvy.com/new-hero.png"
+              alt="Flink app experience"
+              className="relative mx-auto w-full max-w-md rounded-[2rem] border border-white/10 bg-[#0a2115] p-2 shadow-2xl"
             />
-            <Button
-              type="submit"
-              className="h-12 px-6 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold whitespace-nowrap"
-              disabled={submitted}
-            >
-              {submitted ? "✓ Joined!" : "Join the Waiting List"}
-            </Button>
-          </form>
-
-          {submitted && (
-            <p className="text-sm text-accent mt-4 animate-pulse">
-              Thank you! Check your email soon.
-            </p>
-          )}
-        </div>
-      </section>
-
-      {/* Problem Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-secondary/5">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6 text-balance">
-            The Challenge Farmers Face
-          </h2>
-          <div className="grid gap-4 sm:gap-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Many smallholder farmers rely on guesswork when making critical
-              decisions. Without reliable information, they struggle with low
-              yields, significant post-harvest losses, and unfair market prices.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Better information can change everything — helping farmers grow
-              more, waste less, and earn more.
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Solution Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-            How Flink Helps
-          </h2>
-          <div className="bg-card border border-border rounded-lg p-6 sm:p-8">
-            <p className="text-lg text-card-foreground leading-relaxed mb-6">
-              Flink is a lightweight, mobile-first platform designed for
-              low-connectivity environments. It brings practical farming
-              information right to your phone, without requiring high internet
-              speeds or expensive devices.
-            </p>
-            <div className="space-y-4">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center">
-                  <span className="text-primary-foreground text-sm font-bold">
-                    ✓
-                  </span>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">
-                    Actionable Insights
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Get crop recommendations, farming tips, and market updates
-                    tailored to your location and season.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center">
-                  <span className="text-primary-foreground text-sm font-bold">
-                    ✓
-                  </span>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">
-                    Direct Market Access
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Connect with buyers and other farmers. Sell your produce at
-                    fair prices without middlemen.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center">
-                  <span className="text-primary-foreground text-sm font-bold">
-                    ✓
-                  </span>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">
-                    Works Everywhere
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Designed for low internet speeds and affordable phones.
-                    Flink is built for African farmers.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+      <section className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <div className="mb-8 flex items-center justify-between">
+          <h2 className="text-2xl font-semibold sm:text-3xl">Quick Actions</h2>
+          <span className="text-sm text-white/60">Flink mobile modules</span>
         </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-secondary/5">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-12">
-            What You Get
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, idx) => {
-              const IconComponent = feature.icon;
-              return (
+        <div className="grid gap-5 sm:grid-cols-2">
+          {quickActions.map((item) => {
+            const Icon = item.icon;
+            return (
+              <article
+                key={item.title}
+                className="rounded-3xl border border-white/10 bg-white/[0.04] p-6"
+              >
                 <div
-                  key={idx}
-                  className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors"
+                  className={`mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl ${item.color}`}
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <IconComponent className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-lg text-foreground mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {feature.description}
-                  </p>
+                  <Icon className="h-7 w-7" />
                 </div>
-              );
-            })}
-          </div>
+                <h3 className="text-xl font-medium">{item.title}</h3>
+                <p className="mt-2 text-white/65">{item.text}</p>
+              </article>
+            );
+          })}
         </div>
       </section>
 
-      {/* Why It Matters Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-8">
-            Why This Matters
-          </h2>
-          <div className="space-y-6">
-            <div className="bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-lg p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">
-                More Productivity
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                When farmers have the right information, they make better
-                decisions. Better decisions lead to bigger harvests.
-              </p>
-            </div>
-            <div className="bg-gradient-to-r from-accent/10 to-primary/10 border border-accent/20 rounded-lg p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">
-                Less Waste
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Practical farming guidance and proper storage tips reduce
-                post-harvest losses. What you grow, you keep.
-              </p>
-            </div>
-            <div className="bg-gradient-to-r from-secondary/20 to-primary/10 border border-secondary/30 rounded-lg p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">
-                Better Income
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                See market prices before you harvest. Sell directly to buyers.
-                Skip the middleman. Keep more of what you earn.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 bg-primary text-primary-foreground">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-balance">
-            Ready to Farm Smarter?
-          </h2>
-          <p className="text-lg sm:text-xl mb-8 opacity-90 max-w-2xl mx-auto text-balance">
-            Join the waiting list to be among the first to access Flink. Early
-            access means early growth for your farm.
-          </p>
-
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-          >
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="flex-1 h-12 text-base bg-primary-foreground text-foreground placeholder:text-muted-foreground"
+      <section className="border-y border-white/10 bg-[#06130d]">
+        <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-14 sm:px-6 md:grid-cols-3 lg:px-8 lg:py-16">
+          <article className="rounded-3xl border border-white/10 bg-white/[0.03] p-5">
+            <p className="mb-3 text-sm uppercase tracking-[0.16em] text-white/55">
+              Instant Global Payments
+            </p>
+            <h3 className="text-xl font-semibold">Wallet & Payouts</h3>
+            <p className="mt-2 text-sm text-white/70">
+              Receive payouts instantly for produce sold through Flink.
+            </p>
+            <img
+              src="https://coprvy.com/bento-left.png"
+              alt="Wallet UI"
+              className="mt-5 w-full rounded-2xl border border-white/10"
             />
-            <Button
-              type="submit"
-              className="h-12 px-6 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold whitespace-nowrap"
-              disabled={submitted}
-            >
-              {submitted ? "✓ Joined!" : "Get Early Access"}
-            </Button>
-          </form>
+          </article>
+
+          <article className="rounded-3xl border border-white/10 bg-white/[0.03] p-5">
+            <p className="mb-3 text-sm uppercase tracking-[0.16em] text-white/55">
+              One Tap Contracts
+            </p>
+            <h3 className="text-xl font-semibold">Smart Produce Deals</h3>
+            <p className="mt-2 text-sm text-white/70">
+              Lock terms before delivery and protect both farmer and buyer.
+            </p>
+            <img
+              src="https://coprvy.com/bento-middle.png"
+              alt="Smart contract UI"
+              className="mt-5 w-full rounded-2xl border border-white/10"
+            />
+          </article>
+
+          <article className="rounded-3xl border border-white/10 bg-white/[0.03] p-5">
+            <p className="mb-3 text-sm uppercase tracking-[0.16em] text-white/55">
+              Secure Communication
+            </p>
+            <h3 className="text-xl font-semibold">Farmer Messaging</h3>
+            <p className="mt-2 text-sm text-white/70">
+              Chat directly with agents, buyers, and extension experts.
+            </p>
+            <img
+              src="https://coprvy.com/bento-right.png"
+              alt="Communication UI"
+              className="mt-5 w-full rounded-2xl border border-white/10"
+            />
+          </article>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12 bg-card border-t border-border text-center text-muted-foreground">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-base sm:text-lg font-medium">
-            Flink, Built for farmers. From K09D
-          </p>
-          <p className="text-sm mt-2">
-            Empowering smallholder farmers across Africa with information and
-            market access.
-          </p>
+      <section className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <div className="grid gap-6 md:grid-cols-2">
+          <article className="overflow-hidden rounded-3xl border border-white/10 bg-[#112416] p-6">
+            <p className="text-sm uppercase tracking-[0.15em] text-white/60">
+              Flink Wallet
+            </p>
+            <h3 className="mt-2 text-2xl font-semibold">Value Backed by Work</h3>
+            <p className="mt-3 text-white/70">
+              Store earnings, swap smoothly, and plan the next season with clear
+              cashflow visibility.
+            </p>
+            <img
+              src="https://coprvy.com/coin.png"
+              alt="Flink coin visual"
+              className="mt-6 h-56 w-full rounded-2xl object-cover"
+            />
+          </article>
+
+          <article className="overflow-hidden rounded-3xl border border-white/10 bg-[#0f1e34] p-6">
+            <p className="text-sm uppercase tracking-[0.15em] text-white/60">
+              Flink Card
+            </p>
+            <h3 className="mt-2 text-2xl font-semibold">Spend in Real Life</h3>
+            <p className="mt-3 text-white/70">
+              Convert farm income into daily spending with a card-friendly payout
+              experience.
+            </p>
+            <img
+              src="https://coprvy.com/card.png"
+              alt="Flink card visual"
+              className="mt-6 h-56 w-full rounded-2xl object-cover"
+            />
+          </article>
         </div>
+      </section>
+
+      <section className="relative overflow-hidden border-t border-white/10">
+        <img
+          src="https://coprvy.com/horizont-background.webp"
+          alt="Background"
+          className="absolute inset-0 h-full w-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-[#041108]/80" />
+        <div className="relative mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div className="max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.16em] text-[#9ee9bf]">
+              Early Access
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold leading-tight sm:text-4xl">
+              Be first to experience the new Flink farming platform.
+            </h2>
+            <p className="mt-4 text-white/70">
+              Join farmers already preparing for better harvest decisions and
+              faster market access.
+            </p>
+            <div className="mt-8">
+              <WaitlistForm
+                submitted={submitted}
+                onSubmit={handleSubmit}
+                email={email}
+                name={name}
+                setEmail={setEmail}
+                setName={setName}
+                buttonLabel="Get Early Access"
+                stacked
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-8 text-sm text-white/65 sm:px-6 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+        <p>Flink. Built for farmers.</p>
+        <a
+          href="#"
+          className="inline-flex items-center gap-2 text-white hover:text-[#9ee9bf]"
+        >
+          Contact the team <ArrowUpRight className="h-4 w-4" />
+        </a>
       </footer>
     </main>
   );
