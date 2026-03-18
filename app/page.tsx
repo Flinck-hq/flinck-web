@@ -20,12 +20,12 @@ const PLAY_STORE_URL =
 
 const screenshots = [
   {
-    src: "/flink.jpeg",
+    src: "/home.jpg",
     alt: "Flink home dashboard showing wallet, quick actions, and weather insights",
     tone: "from-[#1f7a45]/18 to-[#d6f277]/10",
   },
   {
-    src: "/Screenshot_20251231_191138_Expo Go.jpg",
+    src: "/profile.jpg",
     alt: "Flink profile screen showing farmer identity, wallet card, and app navigation",
     tone: "from-[#163d2a]/10 to-[#d9a441]/16",
   },
@@ -153,7 +153,8 @@ export default function Home() {
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#163d2a]/15 bg-white/80 px-4 py-2 text-sm text-slate-700 shadow-sm">
               <BadgeCheck className="h-4 w-4 text-[#1f7a45]" />
-              Designed for real farm operations, market movement and daily execution
+              Designed for real farm operations, market movement and daily
+              execution
             </div>
 
             <h1 className="max-w-4xl text-5xl font-semibold tracking-[-0.05em] text-slate-950 sm:text-6xl lg:text-7xl">
@@ -225,8 +226,12 @@ export default function Home() {
                   <div className="rounded-[1.5rem] bg-white/8 p-4">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="text-sm text-white/55">Marketplace pulse</p>
-                        <p className="mt-1 text-xl font-semibold">Products, orders, demand</p>
+                        <p className="text-sm text-white/55">
+                          Marketplace pulse
+                        </p>
+                        <p className="mt-1 text-xl font-semibold">
+                          Products, orders, demand
+                        </p>
                       </div>
                       <TrendingUp className="h-5 w-5 text-[#d6f277]" />
                     </div>
@@ -242,7 +247,8 @@ export default function Home() {
                         Clear
                       </p>
                       <p className="mt-3 text-sm leading-6 text-slate-600">
-                        Weather context that supports real planning, not passive reading.
+                        Weather context that supports real planning, not passive
+                        reading.
                       </p>
                     </div>
                     <div className="rounded-[1.5rem] bg-white/8 p-5">
@@ -251,7 +257,8 @@ export default function Home() {
                         Ready
                       </p>
                       <p className="mt-3 text-sm leading-6 text-white/65">
-                        Guidance, product insight and next-step support in one place.
+                        Guidance, product insight and next-step support in one
+                        place.
                       </p>
                     </div>
                   </div>
@@ -459,7 +466,8 @@ export default function Home() {
                 Ready to launch stronger
               </p>
               <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
-                Flink deserves a landing page that feels like the product is already real.
+                Flink deserves a landing page that feels like the product is
+                already real.
               </h2>
               <p className="mt-5 text-lg leading-8 text-white/72">
                 Replace the waitlist posture with a confident premium presence
