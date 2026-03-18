@@ -5,26 +5,29 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
-const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://getflink.pro"),
   icons: {
     icon: [
-      { url: "/icon-dark-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/icon-light-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo.png", sizes: "32x32", type: "image/png" },
     ],
-    shortcut: "/icon-dark-32x32.png",
+    shortcut: "/logo.png",
     apple: "/logo.jpg",
   },
 
   title: {
-    default: "Flink | Premium Agri Intelligence and Marketplace Platform",
+    default: "Flink | AgriTech Platform",
     template: "%s | Flink",
   },
 
   description:
-    "Flink is a premium agri platform for weather-aware decisions, crop guidance, modern product listings, farmer credibility and direct market access.",
+    "Flink is a agri-tech platform for weather-aware decisions, crop guidance, modern product listings, farmer credibility and direct market access.",
 
   applicationName: "Flink",
 
@@ -99,9 +102,7 @@ export default function RootLayout({
         name: "David Uchenna Munachimso",
         url: "https://kingdav.com.ng",
       },
-      sameAs: [
-        "https://x.com/flink_space"
-      ],
+      sameAs: ["https://x.com/flink_space"],
     },
 
     // PRODUCT / SOFTWARE
@@ -145,4 +146,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-  }
+}
