@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://getflink.pro"),
 
   title: {
-    default: "Flink – Smarter Farming Starts with Better Information",
+    default: "Flink | Premium Agri Intelligence and Marketplace Platform",
     template: "%s | Flink",
   },
 
   description:
-    "Flink is an AgriTech platform that helps smallholder farmers make smarter decisions with crop recommendations, market insights, and direct sales opportunities. Join the early access waitlist.",
+    "Flink is a premium agri platform for weather-aware decisions, crop guidance, modern product listings, farmer credibility and direct market access.",
 
   applicationName: "Flink",
 
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   publisher: "Flink",
 
   openGraph: {
-    title: "Flink – Smarter Farming Starts with Better Information",
+    title: "Flink | Premium Agri Intelligence and Marketplace Platform",
     description:
-      "Helping farmers grow smarter with data, insights, and direct market access. Join the Flink early access waitlist.",
+      "Helping farmers grow smarter with decision intelligence, direct market access and a modern agricultural commerce experience.",
     url: "https://getflink.pro",
     siteName: "Flink",
     images: [
@@ -57,9 +57,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Flink – Smarter Farming",
+    title: "Flink | Premium Agri Intelligence",
     description:
-      "AgriTech platform helping farmers make better decisions and access markets.",
+      "Premium agri platform helping farmers make better decisions and move faster from harvest to income.",
     images: ["/logo.png"],
   },
 
@@ -85,7 +85,7 @@ export default function RootLayout({
       url: "https://getflink.pro",
       logo: "https://getflink.pro/logo.png", // add logo in public/
       description:
-        "Flink is an AgriTech platform helping smallholder farmers with crop insights, market intelligence, and direct sales opportunities.",
+        "Flink is a premium agri platform helping farmers with crop intelligence, market visibility and direct sales workflows.",
       founder: {
         "@type": "Person",
         name: "David Uchenna Munachimso",
@@ -105,7 +105,7 @@ export default function RootLayout({
       operatingSystem: "Web",
       url: "https://getflink.pro",
       description:
-        "A digital platform that helps farmers decide what to plant, when to sell, and where to find buyers.",
+        "A modern agri platform that helps farmers decide what to plant, when to sell and how to reach buyers with confidence.",
       creator: {
         "@type": "Person",
         name: "David Uchenna Munachimso",
