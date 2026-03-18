@@ -15,6 +15,22 @@ import {
   Wallet,
 } from "lucide-react";
 
+const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=com.k09dtechnologies.flink";
+
+const screenshots = [
+  {
+    src: "/flink.jpeg",
+    alt: "Flink home dashboard showing wallet, quick actions, and weather insights",
+    tone: "from-[#1f7a45]/18 to-[#d6f277]/10",
+  },
+  {
+    src: "/Screenshot_20251231_191138_Expo Go.jpg",
+    alt: "Flink profile screen showing farmer identity, wallet card, and app navigation",
+    tone: "from-[#163d2a]/10 to-[#d9a441]/16",
+  },
+];
+
 const highlights = [
   {
     value: "One app",
@@ -125,8 +141,8 @@ export default function Home() {
             asChild
             className="rounded-full bg-[#163d2a] px-5 text-white hover:bg-[#0f2a1d]"
           >
-            <a href="mailto:hello@getflink.pro?subject=Book%20a%20Flink%20demo">
-              Book a demo
+            <a href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
+              Download app
             </a>
           </Button>
         </div>
@@ -156,8 +172,8 @@ export default function Home() {
                 size="lg"
                 className="h-14 rounded-full bg-[#163d2a] px-7 text-base text-white hover:bg-[#0f2a1d]"
               >
-                <a href="mailto:hello@getflink.pro?subject=Book%20a%20Flink%20demo">
-                  Request a demo
+                <a href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
+                  Download on Play Store
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
@@ -251,6 +267,65 @@ export default function Home() {
                 Farmers, buyers and insight tools finally work together.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 pb-8 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-sm uppercase tracking-[0.28em] text-[#1f7a45]">
+                Product Preview
+              </p>
+              <h2 className="mt-3 text-4xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-5xl">
+                Real screens, not placeholder promises.
+              </h2>
+              <p className="mt-4 text-base leading-7 text-slate-600">
+                Flink already has a polished mobile experience for wallet flows,
+                weather-aware actions, profile identity and marketplace access.
+              </p>
+            </div>
+
+            <Button
+              asChild
+              variant="outline"
+              className="rounded-full border-slate-300 bg-white/70 px-6 text-slate-900 hover:bg-white"
+            >
+              <a href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
+                Get the app
+              </a>
+            </Button>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+            {screenshots.map((shot, index) => (
+              <div
+                key={shot.src}
+                className={`relative overflow-hidden rounded-[2.25rem] border border-slate-900/8 bg-gradient-to-br ${shot.tone} p-4 shadow-[0_28px_80px_rgba(15,23,42,0.08)]`}
+              >
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.65),_transparent_55%)]" />
+                <div className="relative rounded-[1.8rem] bg-white/80 p-3 backdrop-blur">
+                  <div className="mb-3 flex items-center justify-between px-2">
+                    <p className="text-xs uppercase tracking-[0.24em] text-slate-500">
+                      Screen 0{index + 1}
+                    </p>
+                    <div className="flex gap-1.5">
+                      <span className="h-2.5 w-2.5 rounded-full bg-slate-300/80" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-slate-300/80" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-slate-300/80" />
+                    </div>
+                  </div>
+                  <div className="overflow-hidden rounded-[1.5rem] border border-slate-900/8 bg-[#f5f2e9]">
+                    <img
+                      src={shot.src}
+                      alt={shot.alt}
+                      className="h-auto w-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -398,8 +473,8 @@ export default function Home() {
                 size="lg"
                 className="h-14 rounded-full bg-[#d6f277] px-7 text-base text-slate-950 hover:bg-[#c7ea54]"
               >
-                <a href="mailto:hello@getflink.pro?subject=Launch%20Flink%20with%20me">
-                  Start a conversation
+                <a href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
+                  Download Flink
                 </a>
               </Button>
               <Button
