@@ -14,11 +14,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://getflink.pro"),
   icons: {
     icon: [
-      { url: "/logo.png", sizes: "32x32", type: "image/png" },
-      { url: "/logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon.jpg", sizes: "332x350", type: "image/jpeg" },
     ],
-    shortcut: "/logo.png",
-    apple: "/logo.jpg",
+    shortcut: "/icon.svg",
+    apple: "/icon.jpg",
   },
 
   title: {
