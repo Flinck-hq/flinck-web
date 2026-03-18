@@ -9,6 +9,14 @@ const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://getflink.pro"),
+  icons: {
+    icon: [
+      { url: "/icon-dark-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-light-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    shortcut: "/icon-dark-32x32.png",
+    apple: "/logo.jpg",
+  },
 
   title: {
     default: "Flink | Premium Agri Intelligence and Marketplace Platform",
@@ -45,10 +53,10 @@ export const metadata: Metadata = {
     siteName: "Flink",
     images: [
       {
-        url: "/logo.png", // add this image in public/
-        width: 1200,
-        height: 630,
-        alt: "Flink AgriTech",
+        url: "/logo.jpg",
+        width: 720,
+        height: 1600,
+        alt: "Flink logo",
       },
     ],
     locale: "en_US",
@@ -60,7 +68,7 @@ export const metadata: Metadata = {
     title: "Flink | Premium Agri Intelligence",
     description:
       "Premium agri platform helping farmers make better decisions and move faster from harvest to income.",
-    images: ["/logo.png"],
+    images: ["/logo.jpg"],
   },
 
   robots: {
@@ -83,7 +91,7 @@ export default function RootLayout({
       "@type": "Organization",
       name: "Flink",
       url: "https://getflink.pro",
-      logo: "https://getflink.pro/logo.png", // add logo in public/
+      logo: "https://getflink.pro/logo.jpg",
       description:
         "Flink is a premium agri platform helping farmers with crop intelligence, market visibility and direct sales workflows.",
       founder: {

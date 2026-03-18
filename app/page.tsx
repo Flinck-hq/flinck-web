@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -112,14 +113,23 @@ export default function Home() {
       </div>
 
       <nav className="sticky top-0 z-50 border-b border-slate-900/10 bg-[#f6f3ea]/85 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#163d2a] text-white shadow-[0_12px_30px_rgba(22,61,42,0.22)]">
-              <Sprout className="h-5 w-5" />
+            <div className="overflow-hidden rounded-2xl border border-slate-900/8 bg-white shadow-[0_12px_30px_rgba(22,61,42,0.12)]">
+              <Image
+                src="/logo.jpg"
+                alt="Flink logo"
+                width={44}
+                height={44}
+                className="h-11 w-11 object-cover"
+                priority
+              />
             </div>
             <div>
-              <p className="text-lg font-semibold tracking-tight">Flink</p>
-              <p className="text-xs uppercase tracking-[0.24em] text-slate-500">
+              <p className="text-base font-semibold tracking-tight sm:text-lg">
+                Flink
+              </p>
+              <p className="hidden text-xs uppercase tracking-[0.24em] text-slate-500 sm:block">
                 Precision for modern farming
               </p>
             </div>
@@ -139,7 +149,7 @@ export default function Home() {
 
           <Button
             asChild
-            className="rounded-full bg-[#163d2a] px-5 text-white hover:bg-[#0f2a1d]"
+            className="h-11 rounded-full bg-[#163d2a] px-4 text-white hover:bg-[#0f2a1d] sm:px-5"
           >
             <a href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
               Download app
@@ -148,30 +158,30 @@ export default function Home() {
         </div>
       </nav>
 
-      <section className="px-5 pb-14 pt-10 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8 lg:pb-24">
+      <section className="px-4 pb-14 pt-8 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8 lg:pb-24">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <div>
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#163d2a]/15 bg-white/80 px-4 py-2 text-sm text-slate-700 shadow-sm">
+            <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-[#163d2a]/15 bg-white/80 px-4 py-2 text-xs text-slate-700 shadow-sm sm:text-sm">
               <BadgeCheck className="h-4 w-4 text-[#1f7a45]" />
               Designed for real farm operations, market movement and daily
               execution
             </div>
 
-            <h1 className="max-w-4xl text-5xl font-semibold tracking-[-0.05em] text-slate-950 sm:text-6xl lg:text-7xl">
+            <h1 className="max-w-4xl text-[2.85rem] leading-[0.95] font-semibold tracking-[-0.06em] text-slate-950 sm:text-6xl sm:leading-none lg:text-7xl">
               The premium operating layer for smarter farming and faster trade.
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
+            <p className="mt-6 max-w-2xl text-base leading-7 text-slate-600 sm:text-xl sm:leading-8">
               Flink brings weather intelligence, crop support, farmer content,
               marketplace workflows and buyer-ready product discovery into one
               polished platform that feels modern from the first click.
             </p>
 
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button
                 asChild
                 size="lg"
-                className="h-14 rounded-full bg-[#163d2a] px-7 text-base text-white hover:bg-[#0f2a1d]"
+                className="h-14 w-full rounded-full bg-[#163d2a] px-7 text-base text-white hover:bg-[#0f2a1d] sm:w-auto"
               >
                 <a href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
                   Download on Play Store
@@ -182,13 +192,13 @@ export default function Home() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="h-14 rounded-full border-slate-300 bg-white/70 px-7 text-base text-slate-900 hover:bg-white"
+                className="h-14 w-full rounded-full border-slate-300 bg-white/70 px-7 text-base text-slate-900 hover:bg-white sm:w-auto"
               >
                 <a href="#platform">Explore the platform</a>
               </Button>
             </div>
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            <div className="mt-10 grid gap-4 md:grid-cols-3">
               {highlights.map((item) => (
                 <div
                   key={item.value}
@@ -206,8 +216,8 @@ export default function Home() {
           </div>
 
           <div className="relative">
-            <div className="rounded-[2rem] border border-slate-900/10 bg-[#163d2a] p-5 text-white shadow-[0_30px_120px_rgba(22,61,42,0.28)]">
-              <div className="rounded-[1.5rem] border border-white/10 bg-[#10281d] p-6">
+            <div className="rounded-[2rem] border border-slate-900/10 bg-[#163d2a] p-4 text-white shadow-[0_30px_120px_rgba(22,61,42,0.28)] sm:p-5">
+              <div className="rounded-[1.5rem] border border-white/10 bg-[#10281d] p-5 sm:p-6">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-xs uppercase tracking-[0.28em] text-white/55">
@@ -266,7 +276,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="absolute -bottom-6 -left-4 rounded-[1.5rem] border border-slate-900/8 bg-white px-5 py-4 shadow-[0_16px_60px_rgba(15,23,42,0.12)]">
+            <div className="mt-4 rounded-[1.5rem] border border-slate-900/8 bg-white px-5 py-4 shadow-[0_16px_60px_rgba(15,23,42,0.12)] sm:absolute sm:-bottom-6 sm:-left-4 sm:mt-0">
               <p className="text-xs uppercase tracking-[0.24em] text-slate-500">
                 Built for growth
               </p>
@@ -278,7 +288,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 pb-8 sm:px-6 lg:px-8">
+      <section className="px-4 pb-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div className="max-w-2xl">
@@ -305,11 +315,11 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-[1.1fr_0.9fr]">
             {screenshots.map((shot, index) => (
               <div
                 key={shot.src}
-                className={`relative overflow-hidden rounded-[2.25rem] border border-slate-900/8 bg-gradient-to-br ${shot.tone} p-4 shadow-[0_28px_80px_rgba(15,23,42,0.08)]`}
+                className={`relative mx-auto w-full max-w-sm overflow-hidden rounded-[2.25rem] border border-slate-900/8 bg-gradient-to-br ${shot.tone} p-4 shadow-[0_28px_80px_rgba(15,23,42,0.08)] md:max-w-none`}
               >
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.65),_transparent_55%)]" />
                 <div className="relative rounded-[1.8rem] bg-white/80 p-3 backdrop-blur">
