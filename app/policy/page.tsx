@@ -242,13 +242,6 @@ export default function PolicyPage() {
               </div>
             </div>
 
-            <div className="mt-6 rounded-[1.5rem] border border-amber-200 bg-amber-50 px-5 py-4 text-sm leading-7 text-amber-900">
-              This page is materially more complete for Play Store review, but
-              acceptance still depends on whether the app’s actual data
-              collection, permissions, store listing, and Data safety form match
-              what this policy says.
-            </div>
-
             <div className="mt-8 space-y-8">
               {sections.map((section) => (
                 <section
