@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function PlatformPage() {
   return (
-    <main className="min-h-screen bg-[#f6f3ea] text-slate-950">
+    <main className="page-shell min-h-screen bg-[#f6f3ea] text-slate-950">
       <SiteBackground />
       <SiteHeader />
       <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-20">

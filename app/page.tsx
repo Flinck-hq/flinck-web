@@ -9,7 +9,7 @@ import { PLAY_STORE_URL, highlights } from "@/lib/site-content";
 
 export default function Home() {
   return (
-    <main id="top" className="min-h-screen bg-[#f6f3ea] text-slate-950">
+    <main id="top" className="page-shell min-h-screen bg-[#f6f3ea] text-slate-950">
       <SiteBackground />
       <SiteHeader />
 

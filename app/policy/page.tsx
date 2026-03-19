@@ -196,7 +196,7 @@ const sections: Section[] = [
 
 export default function PolicyPage() {
   return (
-    <main className="min-h-screen bg-[#f6f3ea] text-slate-950">
+    <main className="page-shell min-h-screen bg-[#f6f3ea] text-slate-950">
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute left-[-12%] top-[-10rem] h-[28rem] w-[28rem] rounded-full bg-[#1f7a45]/14 blur-3xl" />
         <div className="absolute right-[-10%] top-[10rem] h-[22rem] w-[22rem] rounded-full bg-[#d9a441]/14 blur-3xl" />
