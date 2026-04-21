@@ -12,6 +12,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://getflink.pro"),
+  alternate: {
+    canonical: "https://getflink.pro",
+  },
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
@@ -22,12 +25,12 @@ export const metadata: Metadata = {
   },
 
   title: {
-    default: "Flink | Agricultural Social Network and Marketplace",
+    default: "Flink – Agricultural Social Network & Marketplace for Farmers",
     template: "%s | Flink",
   },
 
   description:
-    "Flink is a agri-tech platform for weather-aware decisions, crop guidance, modern product listings, farmer credibility and direct market access.",
+    "Flink is a modern agricultural social network and marketplace connecting farmers around the world and helping them decide what to plant, when to sell and how to reach buyers with confidence.",
 
   applicationName: "Flink",
 
@@ -52,7 +55,7 @@ export const metadata: Metadata = {
   publisher: "Flink",
 
   openGraph: {
-    title: "Flink | Agricultural Social Network and Marketplace",
+    title: "Flink – Agricultural Social Network & Marketplace for Farmers",
     description:
       "Connecting farmers around the world with decision intelligence, direct market access and a modern agricultural commerce experience.",
     url: "https://getflink.pro",
@@ -60,9 +63,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/logo.jpg",
-        width: 720,
-        height: 1600,
-        alt: "Flink logo",
+        width: 1200,
+        height: 630,
+        alt: "Flink Agricultural Social Network for Farmers",
       },
     ],
     locale: "en_US",
@@ -71,7 +74,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Flink | Agricultural Social Network and Marketplace",
+    title: "Flink – Agricultural Social Network & Marketplace for Farmers",
     description:
       "Connecting farmers around the world with decision intelligence, direct market access and a modern agricultural commerce experience.",
     images: ["/logo.jpg"],
