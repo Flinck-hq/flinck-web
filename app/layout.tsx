@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
 
   title: {
-    default: "Flink | AgriTech Platform",
+    default: "Flink | Agricultural Social Network and Marketplace",
     template: "%s | Flink",
   },
 
@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     "Flink",
     "Flink AgriTech",
     "AgriTech Nigeria",
+    "Agricultural social network",
+    "Agricultural marketplace",
+    "Farmers marketplace",
     "Farming app Africa",
     "Smart farming",
     "Crop recommendations",
@@ -49,9 +52,9 @@ export const metadata: Metadata = {
   publisher: "Flink",
 
   openGraph: {
-    title: "Flink | Premium Agri Intelligence and Marketplace Platform",
+    title: "Flink | Agricultural Social Network and Marketplace",
     description:
-      "Helping farmers grow smarter with decision intelligence, direct market access and a modern agricultural commerce experience.",
+      "Connecting farmers around the world with decision intelligence, direct market access and a modern agricultural commerce experience.",
     url: "https://getflink.pro",
     siteName: "Flink",
     images: [
@@ -68,9 +71,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Flink | Premium Agri Intelligence",
+    title: "Flink | Agricultural Social Network and Marketplace",
     description:
-      "Premium agri platform helping farmers make better decisions and move faster from harvest to income.",
+      "Connecting farmers around the world with decision intelligence, direct market access and a modern agricultural commerce experience.",
     images: ["/logo.jpg"],
   },
 
@@ -96,7 +99,7 @@ export default function RootLayout({
       url: "https://getflink.pro",
       logo: "https://getflink.pro/logo.jpg",
       description:
-        "Flink is a premium agri platform helping farmers with crop intelligence, market visibility and direct sales workflows.",
+        "Flink is an agricultural social network and marketplace helping farmers with crop intelligence, market visibility and direct sales workflows.",
       founder: {
         "@type": "Person",
         name: "David Uchenna Munachimso",
@@ -111,10 +114,10 @@ export default function RootLayout({
       "@type": "SoftwareApplication",
       name: "Flink",
       applicationCategory: "BusinessApplication",
-      operatingSystem: "Web",
+      operatingSystem: "iOS, Android",
       url: "https://getflink.pro",
       description:
-        "A modern agri platform that helps farmers decide what to plant, when to sell and how to reach buyers with confidence.",
+        "A modern agricultural social network and marketplace that helps farmers decide what to plant, when to sell and how to reach buyers with confidence.",
       creator: {
         "@type": "Person",
         name: "David Uchenna Munachimso",
