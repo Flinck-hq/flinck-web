@@ -1,12 +1,16 @@
 import Link from "next/link";
 import {
   ArrowRight,
+  BadgeCheck,
   BellRing,
+  ChartColumnBig,
   CloudRainWind,
+  MapPinned,
   MessageSquareMore,
   ShieldCheck,
   Sparkles,
   Store,
+  Wallet,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiteBackground } from "@/components/site-background";
@@ -48,6 +52,37 @@ const workflowSteps = [
   },
 ];
 
+const dailySignals = [
+  {
+    eyebrow: "Weather timing",
+    title: "Tomorrow is a better planting window than today",
+    body: "Flink turns forecasts into useful farm actions instead of generic weather noise.",
+    icon: CloudRainWind,
+    tone: "from-[#f4fbe7] to-white",
+  },
+  {
+    eyebrow: "Buyer demand",
+    title: "Cassava searches are rising around Ibadan",
+    body: "Sellers should see fresh demand movement and product opportunities while they still matter.",
+    icon: ChartColumnBig,
+    tone: "from-[#eef4ff] to-white",
+  },
+  {
+    eyebrow: "Trust in motion",
+    title: "Profile quality affects who gets the first message",
+    body: "Identity, response speed and listing confidence all influence conversion once people discover a product.",
+    icon: BadgeCheck,
+    tone: "from-[#fff3dd] to-white",
+  },
+];
+
+const operatorRail = [
+  "Promoted products should rotate, not overwhelm the same user.",
+  "Weather alerts should feel specific to crop, region and timing.",
+  "Unread replies, connection signals and product movement should drive useful return visits.",
+  "Premium should feel like a meaningful growth layer, not just a paywall.",
+];
+
 export default function Home() {
   return (
     <main id="top" className="page-shell min-h-screen overflow-x-clip bg-[#f7f2e8] text-slate-950">
@@ -63,7 +98,7 @@ export default function Home() {
             </div>
 
             <h1 className="max-w-5xl text-[3rem] font-semibold leading-[0.92] tracking-[-0.075em] text-slate-950 sm:text-[4.8rem] lg:text-[6.4rem]">
-              The operating system for modern agricultural activity.
+              The operating system for African agricultural activity.
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-7 text-slate-600 sm:text-xl sm:leading-8">
@@ -165,6 +200,44 @@ export default function Home() {
               </div>
             </div>
 
+            <div className="reveal-card absolute -left-4 top-14 hidden w-56 rounded-[1.6rem] border border-slate-900/8 bg-white/92 p-4 text-slate-950 shadow-[0_20px_60px_rgba(15,23,42,0.12)] backdrop-blur xl:block">
+              <div className="flex items-center gap-3">
+                <div className="rounded-2xl bg-[#eff8e7] p-2.5 text-[#163d2a]">
+                  <CloudRainWind className="h-4 w-4" />
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.26em] text-slate-500">
+                    Weather Alert
+                  </p>
+                  <p className="mt-1 text-sm font-semibold tracking-tight">
+                    Plant maize this week in Jos
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="reveal-card absolute -right-5 bottom-26 hidden w-60 rounded-[1.6rem] border border-slate-900/8 bg-white/92 p-4 text-slate-950 shadow-[0_20px_60px_rgba(15,23,42,0.12)] backdrop-blur xl:block">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.26em] text-slate-500">
+                    Boosted Listing
+                  </p>
+                  <p className="mt-1 text-sm font-semibold tracking-tight">
+                    Fresh cassava ready for buyers
+                  </p>
+                </div>
+                <div className="rounded-full bg-[#fef3c7] px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#92400e]">
+                  Live
+                </div>
+              </div>
+              <div className="mt-4 h-2 rounded-full bg-slate-100">
+                <div className="h-2 w-[61%] rounded-full bg-[#1f7a45]" />
+              </div>
+              <p className="mt-3 text-xs leading-5 text-slate-600">
+                128 nearby impressions this week with direct buyer chat from the explore feed.
+              </p>
+            </div>
+
             <div className="reveal-card mt-4 rounded-[1.7rem] border border-slate-900/8 bg-white px-5 py-4 shadow-[0_16px_60px_rgba(15,23,42,0.12)] sm:absolute sm:-bottom-8 sm:-left-6 sm:mt-0 sm:max-w-xs">
               <p className="text-xs uppercase tracking-[0.24em] text-slate-500">
                 Why this matters
@@ -233,6 +306,62 @@ export default function Home() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl rounded-[2.8rem] bg-[linear-gradient(135deg,#2756db_0%,#1f7a45_100%)] px-8 py-12 text-white shadow-[0_30px_120px_rgba(37,86,219,0.24)] sm:px-10 sm:py-14 lg:px-12 lg:py-16">
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-white/60">Why Flink can retain people</p>
+              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.05em] sm:text-5xl">
+                Strong products create useful reasons to come back.
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-white/76">
+                Flink should feel valuable every time it is opened: fresh weather context, new buyer movement,
+                product visibility, unread conversations and growth prompts that actually matter.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                {
+                  icon: MapPinned,
+                  title: "Hyper-local weather",
+                  body: "Forecast signals tied to actual farm location and crop timing.",
+                },
+                {
+                  icon: Store,
+                  title: "Marketplace movement",
+                  body: "Listings, boosts and buyer discovery keep supply in motion.",
+                },
+                {
+                  icon: Wallet,
+                  title: "Monetization with context",
+                  body: "Premium and visibility tools are tied to outcomes, not noise.",
+                },
+                {
+                  icon: BadgeCheck,
+                  title: "Trust that compounds",
+                  body: "Farmer identity, profile structure and proof reduce friction in trade.",
+                },
+              ].map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={item.title}
+                    className="reveal-card rounded-[1.9rem] border border-white/14 bg-white/10 p-5 backdrop-blur"
+                  >
+                    <div className="inline-flex rounded-2xl bg-white/14 p-3">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="mt-4 text-xl font-semibold tracking-tight">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-6 text-white/78">{item.body}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
@@ -346,6 +475,94 @@ export default function Home() {
                       <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
                         {item.copy}
                       </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#1f7a45]">Daily motion</p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-[-0.05em] text-slate-950 sm:text-5xl">
+              Flink should always have a compelling next thing to check.
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
+              That is the real retention story: useful weather timing, changing buyer
+              intent, promoted visibility that feels fair, and messaging surfaces that
+              help people act while context is still fresh.
+            </p>
+
+            <div className="mt-8 rounded-[2rem] border border-slate-900/8 bg-[#163d2a] p-6 text-white shadow-[0_28px_90px_rgba(22,61,42,0.22)]">
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.28em] text-white/58">
+                    Operator notes
+                  </p>
+                  <p className="mt-2 text-2xl font-semibold tracking-tight">
+                    Product decisions should feel intentional at every layer.
+                  </p>
+                </div>
+                <div className="rounded-full bg-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.24em] text-white/68">
+                  Flink standard
+                </div>
+              </div>
+
+              <div className="mt-6 space-y-3">
+                {operatorRail.map((item) => (
+                  <div
+                    key={item}
+                    className="reveal-card flex items-start gap-3 rounded-[1.4rem] border border-white/10 bg-white/8 px-4 py-3 backdrop-blur"
+                  >
+                    <div className="mt-0.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[#d6f277]" />
+                    <p className="text-sm leading-6 text-white/78">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="grid gap-5">
+            {dailySignals.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.title}
+                  className={`reveal-card rounded-[2rem] border border-slate-900/8 bg-gradient-to-br ${item.tone} p-6 shadow-[0_22px_80px_rgba(15,23,42,0.06)]`}
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-[10px] uppercase tracking-[0.28em] text-slate-500">
+                        {item.eyebrow}
+                      </p>
+                      <h3 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">
+                        {item.title}
+                      </h3>
+                    </div>
+                    <div className="rounded-2xl bg-white p-3 text-[#163d2a] shadow-[0_12px_30px_rgba(15,23,42,0.08)]">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                  </div>
+
+                  <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600 sm:text-base">
+                    {item.body}
+                  </p>
+
+                  <div className="mt-5 flex items-center justify-between gap-4 rounded-[1.4rem] border border-slate-900/6 bg-white/72 px-4 py-3">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.24em] text-slate-500">
+                        What good looks like
+                      </p>
+                      <p className="mt-1 text-sm font-medium text-slate-700">
+                        Relevant, recent, actionable and calm.
+                      </p>
+                    </div>
+                    <div className="rounded-full bg-[#163d2a] px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-white">
+                      Retention
                     </div>
                   </div>
                 </div>
