@@ -65,37 +65,44 @@ export type FaqItem = {
 export const highlights: Highlight[] = [
   {
     value: "One command layer",
-    label: "Weather, farming guidance, marketplace, wallet, messaging and reputation in one product.",
+    label:
+      "Weather, farming guidance, marketplace, wallet, messaging and reputation in one product.",
   },
   {
     value: "Built for field speed",
-    label: "Designed for fast action on mobile, not slow admin-heavy interfaces.",
+    label:
+      "Designed for fast action on mobile, not slow admin-heavy interfaces.",
   },
   {
     value: "Africa-aware",
-    label: "Local crop decisions, farmer identity, regional trade and buyer discovery all fit the same workflow.",
+    label:
+      "Local crop decisions, farmer identity, regional trade and buyer discovery all fit the same workflow.",
   },
 ];
 
 export const proofStats: ProofStat[] = [
   {
     value: "Weather → action",
-    label: "Flink turns forecast signals into timing guidance, not passive charts.",
+    label:
+      "Flink turns forecast signals into timing guidance, not passive charts.",
     note: "Plan planting, selling and response faster.",
   },
   {
     value: "Marketplace visibility",
-    label: "Products are shaped for discovery, promotion and direct buyer response.",
+    label:
+      "Products are shaped for discovery, promotion and direct buyer response.",
     note: "List, boost and convert in one motion.",
   },
   {
     value: "Identity + trust",
-    label: "Profiles, premium status and verified cues reduce friction in trade.",
+    label:
+      "Profiles, premium status and verified cues reduce friction in trade.",
     note: "Trust should be visible, not guessed.",
   },
   {
     value: "AI support",
-    label: "From weather insight to crop guidance and next-step prompts, assistance stays contextual.",
+    label:
+      "From weather insight to crop guidance and next-step prompts, assistance stays contextual.",
     note: "Advice should feel built into the workflow.",
   },
 ];
@@ -276,4 +283,11 @@ export const navLinks = [
   { href: "/workflow", label: "Workflow" },
   { href: "/download", label: "Download" },
   { href: "/policy", label: "Policy" },
+];
+
+export const flows: string[] = [
+  "Assess conditions & plan",
+  "Create listings & discover inventory",
+  "Coordinate offers & negotiate",
+  "Complete transactions & settle",
 ];
