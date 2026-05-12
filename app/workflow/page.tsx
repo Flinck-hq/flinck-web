@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { SiteBackground } from "@/components/site-background";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -7,7 +8,7 @@ import { flows } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Workflow",
   description:
-    "Understand the core Flink workflow from conditions and planning to listings, discovery, and transactions.",
+    "Understand the core Flink agricultural workflow: From conditions and planning to listing, discovery, and secure transactions.",
 };
 
 export default function WorkflowPage() {
@@ -15,33 +16,48 @@ export default function WorkflowPage() {
     <main className="page-shell min-h-screen bg-[#f6f3ea] text-slate-950">
       <SiteBackground />
       <SiteHeader />
+      
       <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-sm uppercase tracking-[0.28em] text-[#1f7a45]">
-              Workflow
+              System Workflow
             </p>
-            <h1 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-5xl lg:text-6xl">
-              The story is operational, not aspirational.
+            <h1 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-5xl lg:text-7xl">
+              From Field to Market.
             </h1>
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              Flink fits into the day-to-day rhythm of modern farming and
-              agricultural commerce, rather than acting like a passive brochure.
+            <p className="mt-6 text-xl leading-8 text-slate-600">
+              Our streamlined 4-step process ensures that every agricultural decision is backed by data and every transaction is secured by trust.
             </p>
           </div>
 
-          <div className="space-y-5">
+          <div className="relative mb-20 aspect-video w-full overflow-hidden rounded-[3rem] border border-slate-900/10 shadow-2xl">
+            <Image 
+              src="/workflow-visual.png" 
+              alt="The Flink Workflow Infographic" 
+              fill 
+              className="object-contain bg-white"
+            />
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
             {flows.map((flow, index) => (
               <div
                 key={flow}
-                className="flex gap-5 rounded-[1.75rem] border border-slate-900/8 bg-white/80 p-6 shadow-[0_18px_50px_rgba(15,23,42,0.05)]"
+                className="group flex gap-6 rounded-[2.2rem] border border-slate-900/8 bg-white/90 p-8 shadow-[0_18px_50px_rgba(15,23,42,0.05)] transition-all hover:bg-white"
               >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#163d2a] text-sm font-semibold text-white">
-                  0{index + 1}
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#163d2a] text-xl font-bold text-[#d6f277] shadow-[0_10px_20px_rgba(22,61,42,0.15)]">
+                  {index + 1}
                 </div>
                 <div>
-                  <p className="text-lg font-semibold tracking-tight text-slate-950">
+                  <h3 className="text-2xl font-semibold tracking-tight text-slate-950">
                     {flow}
+                  </h3>
+                  <p className="mt-2 text-slate-600 leading-7">
+                    {index === 0 && "Assess environmental signals and soil moisture to plan your farming calendar."}
+                    {index === 1 && "Create high-visibility listings for your produce and reach verified buyers instantly."}
+                    {index === 2 && "Coordinate terms, negotiate pricing, and finalize logistics within our secure environment."}
+                    {index === 3 && "Complete trades with verified fulfillment and build your long-term reputation."}
                   </p>
                 </div>
               </div>
@@ -49,6 +65,7 @@ export default function WorkflowPage() {
           </div>
         </div>
       </section>
+
       <SiteFooter />
     </main>
   );

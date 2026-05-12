@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiteBackground } from "@/components/site-background";
 import { SiteFooter } from "@/components/site-footer";
@@ -10,7 +10,7 @@ import { PLAY_STORE_URL } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Download",
   description:
-    "Download Flink from the Play Store and preview the mobile app experience across wallet, weather, profile, and marketplace flows.",
+    "Join thousands of modern farmers. Download Flink from the Play Store and start optimizing your agricultural trade today.",
 };
 
 export default function DownloadPage() {
@@ -20,33 +20,36 @@ export default function DownloadPage() {
       <SiteHeader />
       <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.28em] text-[#1f7a45]">
-              Download
-            </p>
-            <h1 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-5xl lg:text-6xl">
-              Get Flink on your phone and see the real product in motion.
-            </h1>
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              Flink is designed for mobile-first usage, where most of the
-              traffic and day-to-day product interaction will happen.
-            </p>
-            <div className="mt-8">
-              <Button
-                asChild
-                size="lg"
-                className="h-14 rounded-full bg-[#163d2a] px-7 text-base text-white hover:bg-[#0f2a1d]"
-              >
-                <a href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
-                  Download on Play Store
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#dff2dd] px-3 py-1 text-xs uppercase tracking-[0.24em] text-[#1f7a45]">
+                <Download className="h-4 w-4" />
+                Available Now
+              </div>
+              <h1 className="mt-6 text-4xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-6xl lg:text-7xl">
+                Ready to Digitizing Your Farm.
+              </h1>
+              <p className="mt-6 text-xl leading-8 text-slate-600">
+                Join a growing network of farmers and buyers across Africa. Flink is optimized for low-bandwidth environments and high-velocity trade.
+              </p>
+              <div className="mt-10">
+                <Button
+                  asChild
+                  size="lg"
+                  className="h-16 rounded-full bg-[#163d2a] px-10 text-lg text-white hover:bg-[#0f2a1d] shadow-xl"
+                >
+                  <a href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
+                    Download for Android
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
+                </Button>
+              </div>
             </div>
-          </div>
 
-          <div className="mt-12">
-            <ScreenshotGrid />
+            <div className="relative rounded-[3rem] border border-slate-900/10 bg-white p-4 shadow-2xl">
+               {/* Reusing ScreenshotGrid here for a premium preview */}
+               <ScreenshotGrid />
+            </div>
           </div>
         </div>
       </section>

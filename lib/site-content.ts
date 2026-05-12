@@ -11,9 +11,9 @@ import {
   Sparkles,
   Sprout,
   Store,
+  Wallet,
   TrendingUp,
   Users,
-  Wallet,
 } from "lucide-react";
 
 export const SITE_URL = "https://getflink.pro";
@@ -64,127 +64,127 @@ export type FaqItem = {
 
 export const highlights: Highlight[] = [
   {
-    value: "One command layer",
+    value: "Real-time Intelligence",
     label:
-      "Weather, farming guidance, marketplace, wallet, messaging and reputation in one product.",
+      "Integrated weather alerts, crop health monitoring, and precision farming guidance.",
   },
   {
-    value: "Built for field speed",
+    value: "Market Velocity",
     label:
-      "Designed for fast action on mobile, not slow admin-heavy interfaces.",
+      "Direct-to-buyer marketplace with boosted visibility and rapid negotiation tools.",
   },
   {
-    value: "Africa-aware",
+    value: "Trusted Network",
     label:
-      "Local crop decisions, farmer identity, regional trade and buyer discovery all fit the same workflow.",
+      "Verified farmer identities and reputation systems that ensure secure and credible trade.",
   },
 ];
 
 export const proofStats: ProofStat[] = [
   {
-    value: "Weather → action",
+    value: "Actionable Weather",
     label:
-      "Flink turns forecast signals into timing guidance, not passive charts.",
-    note: "Plan planting, selling and response faster.",
+      "Precision forecasting that provides specific planting and harvesting windows.",
+    note: "Reduce crop loss and optimize field timing.",
   },
   {
-    value: "Marketplace visibility",
+    value: "Boosted Sales",
     label:
-      "Products are shaped for discovery, promotion and direct buyer response.",
-    note: "List, boost and convert in one motion.",
+      "Marketplace listings with priority visibility for high-demand agricultural products.",
+    note: "Connect with buyers 3x faster than traditional methods.",
   },
   {
-    value: "Identity + trust",
+    value: "Verified Trust",
     label:
-      "Profiles, premium status and verified cues reduce friction in trade.",
-    note: "Trust should be visible, not guessed.",
+      "Secure profiles and transaction history that build long-term trade credibility.",
+    note: "Eliminate buyer hesitation and secure better deals.",
   },
   {
-    value: "AI support",
+    value: "Smart Advisory",
     label:
-      "From weather insight to crop guidance and next-step prompts, assistance stays contextual.",
-    note: "Advice should feel built into the workflow.",
+      "Contextual AI assistance for pest control, soil management, and market pricing.",
+    note: "Data-driven decisions for every stage of the season.",
   },
 ];
 
 export const pillars: FeatureCard[] = [
   {
     icon: CloudRainWind,
-    eyebrow: "Signal",
-    title: "Weather intelligence that leads to action",
+    eyebrow: "Precision",
+    title: "Intelligence-Led Farming",
     description:
-      "Farmers should not need three apps and a lucky guess to decide when to plant, wait, protect, or push supply.",
+      "Hyper-local weather data and crop-specific guidance help you act at the perfect moment to maximize yield.",
   },
   {
     icon: Store,
     eyebrow: "Commerce",
-    title: "A marketplace designed to move products, not just display them",
+    title: "Unified Agricultural Marketplace",
     description:
-      "From product cards to boosted visibility and direct chat, the selling loop stays tight and mobile-native.",
+      "List, promote, and sell your produce directly to a network of verified buyers with zero middlemen friction.",
   },
   {
     icon: Users,
-    eyebrow: "Network",
-    title: "A social graph for agriculture, not generic posting",
+    eyebrow: "Community",
+    title: "Verified Trade Ecosystem",
     description:
-      "Content, comments, connections and farmer identity all reinforce trust, discovery and repeat activity.",
+      "Build a professional reputation with a verified identity that facilitates secure and repeated business interactions.",
   },
   {
     icon: Wallet,
-    eyebrow: "Execution",
-    title: "Payments, premium, boosts and momentum in the same product surface",
+    eyebrow: "Growth",
+    title: "Financial Operating Layer",
     description:
-      "When insight, trust and transaction live together, retention becomes a product outcome instead of a marketing wish.",
+      "Manage payments, track marketplace performance, and access premium tools to scale your agricultural operations.",
   },
 ];
 
 export const capabilities: FeatureCard[] = [
   {
     icon: MapPinned,
-    title: "Location-aware weather",
-    copy: "Forecast data is shaped around where the farmer actually operates, so advice feels timely and grounded.",
+    title: "Location-Specific Alerts",
+    copy: "Get notified about weather shifts and market demands specifically relevant to your exact farm location.",
   },
   {
     icon: Sprout,
-    title: "Crop-specific guidance",
-    copy: "Planting windows, crop matching and farm management nudges help users return for decisions, not just browsing.",
+    title: "Crop Management",
+    copy: "Access detailed guidance for planting, protection, and harvesting based on real-time environmental data.",
   },
   {
     icon: ShoppingBasket,
-    title: "Buyer-ready product listing",
-    copy: "Product pages are built for confidence, clear pricing, promoted reach and easy conversation with sellers.",
+    title: "Direct Marketplace Access",
+    copy: "Showcase your produce to a broad audience of buyers with clear pricing and high-visibility listing options.",
   },
   {
     icon: MessageSquareMore,
-    title: "Live communication",
-    copy: "Fast messaging turns discovery into negotiation without forcing users off-platform.",
+    title: "Integrated Negotiation",
+    copy: "Chat directly with buyers and sellers within the app to finalize deals and coordinate logistics securely.",
   },
   {
     icon: BellRing,
-    title: "Re-engagement loops",
-    copy: "Weather alerts, unread messages, boost expiry reminders and account progress prompts all bring people back with reason.",
+    title: "Critical Notifications",
+    copy: "Never miss a planting window, a buyer offer, or a market opportunity with our intelligent alert system.",
   },
   {
     icon: TrendingUp,
-    title: "Growth surfaces",
-    copy: "Premium, boosted visibility and analytics create a stronger value ladder for serious operators.",
+    title: "Performance Insights",
+    copy: "Monitor your listing views, buyer engagement, and sales trends to refine your market strategy.",
   },
 ];
 
 export const storyCards: StoryCard[] = [
   {
-    title: "Before sunrise",
-    text: "A farmer opens Flink to check field conditions, crop timing and what needs attention today.",
+    title: "Analyze",
+    text: "Review field conditions and weather forecasts to determine the optimal actions for the day.",
     accent: "bg-[#d9f99d] text-[#25410f]",
   },
   {
-    title: "Midday selling",
-    text: "Inventory becomes a polished listing with visibility, chat and product credibility already built in.",
+    title: "Connect",
+    text: "List produce and engage with buyers through our secure, high-visibility marketplace interface.",
     accent: "bg-[#f6d08d] text-[#5a3510]",
   },
   {
-    title: "Evening follow-up",
-    text: "Messages, alerts, comments and weather nudges pull the user back with context, not empty notifications.",
+    title: "Grow",
+    text: "Build a verified track record and use data-driven insights to scale your farming business.",
     accent: "bg-[#c7e5ff] text-[#153756]",
   },
 ];
@@ -192,75 +192,75 @@ export const storyCards: StoryCard[] = [
 export const platformModules: FeatureCard[] = [
   {
     icon: Sparkles,
-    eyebrow: "Assistant",
-    title: "AI advisory and premium guidance",
+    eyebrow: "Assistance",
+    title: "Contextual AI Advisory",
     description:
-      "Advice feels embedded inside the operating flow instead of being a detached chatbot island.",
+      "Receive expert guidance on crop health and market trends directly within your daily operational workflow.",
   },
   {
     icon: BarChart3,
-    eyebrow: "Analytics",
-    title: "Signals that show what is working",
+    eyebrow: "Data",
+    title: "Operational Analytics",
     description:
-      "Performance, listing visibility and account momentum can grow into a more serious operator dashboard over time.",
+      "Track every aspect of your farm's performance and marketplace reach with detailed, easy-to-read data.",
   },
   {
     icon: ShieldCheck,
-    eyebrow: "Trust",
-    title: "Identity that reduces buyer hesitation",
+    eyebrow: "Security",
+    title: "Reputation Management",
     description:
-      "Verified cues, premium status and consistent profile structure help the market feel safer and more credible.",
+      "Maintain a verified profile that serves as your professional resume in the agricultural trade network.",
   },
   {
     icon: ArrowUpRight,
     eyebrow: "Velocity",
-    title: "A cleaner path from interest to response",
+    title: "Optimized Trade Loops",
     description:
-      "Less friction in discovery, more reasons to respond, and tighter loops between demand and action.",
+      "Reduce the time between harvesting and selling with tools designed for maximum market efficiency.",
   },
 ];
 
 export const testimonials: Testimonial[] = [
   {
     name: "Amina Yusuf",
-    role: "Vegetable farmer",
+    role: "Commercial Vegetable Farmer",
     quote:
-      "What I want from a farming app is simple: tell me what matters now, help me sell faster, and keep everything in one place. Flink feels closest to that.",
+      "Flink provides the exact data I need to manage my harvests effectively. The marketplace visibility has significantly increased my monthly sales.",
   },
   {
     name: "Daniel Kofi",
-    role: "Produce buyer",
+    role: "Institutional Produce Buyer",
     quote:
-      "The trust layer matters. When listings, chat and identity feel stronger, I waste less time chasing uncertain suppliers.",
+      "The verified identity system on Flink has completely changed how I source produce. I can trade with confidence and speed.",
   },
   {
     name: "Esther Njeri",
-    role: "Agri operator",
+    role: "Agricultural Cooperative Manager",
     quote:
-      "The best part is not one feature. It is how weather, product discovery and messages connect into one workflow.",
+      "Integrating weather alerts with marketplace access in one app is a game-changer for our members' productivity.",
   },
 ];
 
 export const faqs: FaqItem[] = [
   {
-    question: "Who is Flink built for?",
+    question: "How does Flink verify users?",
     answer:
-      "Flink is built for farmers, produce sellers, buyers and ecosystem operators who need practical decisions, product visibility and faster trade loops in one mobile-first experience.",
+      "We use a multi-step verification process that includes identity checks and reputation tracking to ensure all participants are credible and professional.",
   },
   {
-    question: "Is Flink only a marketplace?",
+    question: "Can I manage multiple crops on Flink?",
     answer:
-      "No. The marketplace is one layer. Flink also brings weather-informed action, crop guidance, content, identity, messaging and premium growth tools together.",
+      "Yes. Flink is designed to support diverse agricultural operations, providing specific guidance and marketplace categories for a wide range of crops.",
   },
   {
-    question: "Why make the website more detailed?",
+    question: "How do weather alerts work?",
     answer:
-      "Because Flink is not a tiny single-feature app. The website should communicate depth, trust and product maturity with more storytelling, structure and motion.",
+      "We use hyper-local meteorological data to send you specific, actionable notifications about planting, protection, and harvesting windows based on your farm's location.",
   },
   {
-    question: "Can this level of polish scale further?",
+    question: "Is there a cost to use the marketplace?",
     answer:
-      "Yes. This pass uses your current stack. If you want richer motion after this, adding Framer Motion later would let us deepen transitions and scroll choreography.",
+      "Basic listings are free. We offer premium visibility and analytics tools for operators who want to accelerate their growth and reach more buyers.",
   },
 ];
 
@@ -275,6 +275,21 @@ export const screenshots: Screenshot[] = [
     alt: "Flink profile screen showing farmer identity, wallet card, and app navigation",
     tone: "from-[#163d2a]/12 via-[#d9a441]/14 to-[#fff7e8]",
   },
+  {
+    src: "/hero-mockup.png",
+    alt: "Flink 3D app mockup showing weather alerts and crop health",
+    tone: "from-[#2756db]/12 via-[#1f7a45]/10 to-[#ffffff]",
+  },
+  {
+    src: "/farmer-lifestyle.png",
+    alt: "African farmer using Flink on a smartphone in a maize field",
+    tone: "from-[#f4fbe7] via-[#eef4ff] to-white",
+  },
+  {
+    src: "/marketplace-vibe.png",
+    alt: "Vibrant marketplace with fresh cassava and maize",
+    tone: "from-[#fff3dd] via-[#eef4ff] to-white",
+  },
 ];
 
 export const navLinks = [
@@ -286,8 +301,8 @@ export const navLinks = [
 ];
 
 export const flows: string[] = [
-  "Assess conditions & plan",
-  "Create listings & discover inventory",
-  "Coordinate offers & negotiate",
-  "Complete transactions & settle",
+  "Monitor and Assess Conditions",
+  "List and Promote Inventory",
+  "Negotiate and Secure Deals",
+  "Settle and Scale Operations",
 ];

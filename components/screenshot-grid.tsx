@@ -1,17 +1,35 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { screenshots } from "@/lib/site-content";
 
 export function ScreenshotGrid() {
   return (
     <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
       {screenshots.map((shot, index) => (
-        <div
+        <motion.div
           key={shot.src}
-          className={`group relative overflow-hidden rounded-[2.4rem] border border-slate-900/8 bg-gradient-to-br ${shot.tone} p-4 shadow-[0_28px_90px_rgba(15,23,42,0.08)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_36px_120px_rgba(15,23,42,0.12)]`}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: index * 0.2 }}
+          className={`group relative overflow-hidden rounded-[2.4rem] border border-slate-900/8 bg-gradient-to-br ${shot.tone} p-4 shadow-[0_28px_90px_rgba(15,23,42,0.08)] transition-shadow duration-500 hover:shadow-[0_36px_120px_rgba(15,23,42,0.12)]`}
         >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.72),_transparent_45%)]" />
-          <div className="absolute -right-14 top-14 h-44 w-44 rounded-full bg-white/30 blur-3xl transition duration-500 group-hover:scale-110" />
-          <div className="relative rounded-[2rem] border border-white/60 bg-white/78 p-4 backdrop-blur-xl sm:p-5">
+          <motion.div 
+            animate={{ 
+              scale: [1, 1.1, 1],
+              rotate: [0, 5, 0]
+            }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute -right-14 top-14 h-44 w-44 rounded-full bg-white/30 blur-3xl transition duration-500 group-hover:scale-110" 
+          />
+          <motion.div 
+            whileHover={{ y: -10, rotateX: 5, rotateY: -5 }}
+            className="relative rounded-[2rem] border border-white/60 bg-white/78 p-4 backdrop-blur-xl sm:p-5 transition-transform duration-500"
+            style={{ perspective: "1000px" }}
+          >
             <div className="mb-4 flex items-center justify-between px-1">
               <div>
                 <p className="text-[10px] uppercase tracking-[0.28em] text-slate-500">
@@ -33,11 +51,11 @@ export function ScreenshotGrid() {
                 alt={shot.alt}
                 width={720}
                 height={1600}
-                className="h-auto w-full object-cover transition duration-500 group-hover:scale-[1.02]"
+                className="h-auto w-full object-cover transition duration-700 group-hover:scale-[1.1]"
               />
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       ))}
     </div>
   );
