@@ -5,7 +5,7 @@ import { ArrowLeft, ShieldCheck } from "lucide-react";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Read the Flink privacy policy covering account information, permissions, payments, notifications, security, retention and user rights.",
+    "Read the Flinck privacy policy covering account information, permissions, payments, notifications, security, retention and user rights.",
 };
 
 type Section = {
@@ -18,15 +18,15 @@ const sections: Section[] = [
   {
     title: "1. Introduction",
     body: [
-      `Welcome to Flink ("Flink," "we," "our," or "us"). This Privacy Policy explains how we collect, use, store, share, and protect information when you use the Flink mobile application, website, related communications, and any connected services.`,
+      `Welcome to Flinck ("Flinck," "we," "our," or "us"). This Privacy Policy explains how we collect, use, store, share, and protect information when you use the Flinck mobile application, website, related communications, and any connected services.`,
       `This policy is intended to help users, app stores, and regulators understand what data we process, why we process it, and the choices available to you.`,
     ],
   },
   {
     title: "2. Scope of This Policy",
     body: [
-      `This Privacy Policy applies to information collected through the Flink app, the Flink website, customer support interactions, marketplace activity, and any services that link to or reference this policy.`,
-      `If a third-party service, payment processor, or external website is integrated into the Flink experience, that provider may also process data under its own privacy policy.`,
+      `This Privacy Policy applies to information collected through the Flinck app, the Flinck website, customer support interactions, marketplace activity, and any services that link to or reference this policy.`,
+      `If a third-party service, payment processor, or external website is integrated into the Flinck experience, that provider may also process data under its own privacy policy.`,
     ],
   },
   {
@@ -55,7 +55,7 @@ const sections: Section[] = [
   {
     title: "5. Permissions We May Request",
     body: [
-      `Depending on the features you use, Flink may request device permissions. These permissions are requested only to enable product features and are not used for unrelated purposes.`,
+      `Depending on the features you use, Flinck may request device permissions. These permissions are requested only to enable product features and are not used for unrelated purposes.`,
     ],
     items: [
       "Camera: to take profile photos, product photos, or other images you choose to upload.",
@@ -91,7 +91,7 @@ const sections: Section[] = [
   {
     title: "8. Marketplace Visibility and Public Information",
     body: [
-      `Some information on Flink is intended to be visible to other users so the marketplace can function properly.`,
+      `Some information on Flinck is intended to be visible to other users so the marketplace can function properly.`,
     ],
     items: [
       "Your public profile may include your name, username, profile image, bio, farm information, general location, and seller-related details.",
@@ -102,15 +102,15 @@ const sections: Section[] = [
   {
     title: "9. Payments, Wallets, and Financial Processing",
     body: [
-      `Flink may support wallet or payment-related functionality. We maintain only the information reasonably necessary to display balances, track activity, support withdrawals or funding flows, and keep records associated with those features.`,
-      `Where a third-party payment provider is used, that provider may collect and process financial information under its own privacy and security policies. Flink does not intentionally store full card numbers or equivalent payment credentials unless explicitly stated and legally permitted.`,
+      `Flinck may support wallet or payment-related functionality. We maintain only the information reasonably necessary to display balances, track activity, support withdrawals or funding flows, and keep records associated with those features.`,
+      `Where a third-party payment provider is used, that provider may collect and process financial information under its own privacy and security policies. Flinck does not intentionally store full card numbers or equivalent payment credentials unless explicitly stated and legally permitted.`,
     ],
   },
   {
     title: "10. Notifications and Communications",
     body: [
       `If you enable notifications, we may send push notifications, emails, or in-app notices related to account security, order activity, weather updates, market movements, article updates, or service announcements.`,
-      `You may control certain notification preferences from within your device settings or your Flink account settings where available. Some service or security notifications may still be sent when necessary.`,
+      `You may control certain notification preferences from within your device settings or your Flinck account settings where available. Some service or security notifications may still be sent when necessary.`,
     ],
   },
   {
@@ -128,7 +128,7 @@ const sections: Section[] = [
   {
     title: "12. Third-Party Services",
     body: [
-      `Flink may rely on third-party tools and service providers to deliver portions of the platform. These may include cloud hosting, database providers, image storage services, analytics tools, notification infrastructure, authentication systems, and payment facilitators.`,
+      `Flinck may rely on third-party tools and service providers to deliver portions of the platform. These may include cloud hosting, database providers, image storage services, analytics tools, notification infrastructure, authentication systems, and payment facilitators.`,
       `Examples may include services such as Cloudinary for media storage and other infrastructure providers required to operate the app and website. These providers may process data on our behalf under their own contractual and legal obligations.`,
     ],
   },
@@ -162,7 +162,7 @@ const sections: Section[] = [
   {
     title: "17. Children’s Privacy",
     body: [
-      `Flink is not directed to children, and we do not knowingly collect personal information from children in violation of applicable law. If you believe a child has provided personal information to us improperly, please contact us so that we can investigate and take appropriate action.`,
+      `Flinck is not directed to children, and we do not knowingly collect personal information from children in violation of applicable law. If you believe a child has provided personal information to us improperly, please contact us so that we can investigate and take appropriate action.`,
     ],
   },
   {
@@ -175,7 +175,7 @@ const sections: Section[] = [
   {
     title: "19. Data Safety and App Store Disclosures",
     body: [
-      `The information in this Privacy Policy should be read together with any data safety or privacy disclosures we provide in app store listings and developer consoles. Flink’s disclosures are intended to reflect the data categories actually processed by the app and the purposes described in this policy.`,
+      `The information in this Privacy Policy should be read together with any data safety or privacy disclosures we provide in app store listings and developer consoles. Flinck’s disclosures are intended to reflect the data categories actually processed by the app and the purposes described in this policy.`,
       `App review decisions are made by the relevant platform, and approval may also depend on factors beyond this policy, including app behavior, permissions usage, data safety declarations, screenshots, listing quality, and compliance with current review guidelines.`,
     ],
   },
@@ -188,8 +188,8 @@ const sections: Section[] = [
   {
     title: "21. Contact Us",
     body: [
-      `If you have questions, concerns, or requests related to this Privacy Policy or our handling of personal information, please contact us at compliance@flink.ag.`,
-      `You may also use any support or contact channels provided in the Flink app or website for privacy-related issues.`,
+      `If you have questions, concerns, or requests related to this Privacy Policy or our handling of personal information, please contact us at compliance@Flinck.ag.`,
+      `You may also use any support or contact channels provided in the Flinck app or website for privacy-related issues.`,
     ],
   },
 ];
@@ -223,7 +223,7 @@ export default function PolicyPage() {
                   Privacy Policy
                 </h1>
                 <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
-                  This Privacy Policy explains how Flink collects, uses,
+                  This Privacy Policy explains how Flinck collects, uses,
                   protects, shares, and retains user information across the app,
                   website, and related services. It is written to support user
                   clarity and app-store compliance, but it should also match the
@@ -282,7 +282,7 @@ export default function PolicyPage() {
 
             <div className="mt-10 border-t border-slate-900/8 pt-8 text-center">
               <p className="text-xs uppercase tracking-[0.3em] text-slate-400">
-                Flink Legal Framework v1.1.0
+                Flinck Legal Framework v1.1.0
               </p>
             </div>
           </div>

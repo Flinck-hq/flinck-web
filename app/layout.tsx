@@ -26,18 +26,18 @@ export const metadata: Metadata = {
   },
 
   title: {
-    default: "Flink – Agricultural Social Network & Marketplace for Farmers",
-    template: "%s | Flink",
+    default: "Flinck – Agricultural Social Network & Marketplace for Farmers",
+    template: "%s | Flinck",
   },
 
   description:
-    "Flink is an agricultural social marketplace that helps farmers connect, share insights, and sell farm produce directly to buyers while accessing crop recommendations and market opportunities.",
+    "Flinck is an agricultural social marketplace that helps farmers connect, share insights, and sell farm produce directly to buyers while accessing crop recommendations and market opportunities.",
 
-  applicationName: "Flink",
+  applicationName: "Flinck",
 
   keywords: [
-    "Flink",
-    "Flink AgriTech",
+    "Flinck",
+    "Flinck AgriTech",
     "AgriTech Nigeria",
     "Agricultural social network",
     "Agricultural marketplace",
@@ -53,20 +53,20 @@ export const metadata: Metadata = {
 
   authors: [{ name: "David Uchenna" }],
   creator: "David Uchenna",
-  publisher: "Flink",
+  publisher: "Flinck",
 
   openGraph: {
-    title: "Flink – Agricultural Social Network & Marketplace for Farmers",
+    title: "Flinck – Agricultural Social Network & Marketplace for Farmers",
     description:
-      "Flink is an agricultural social marketplace that helps farmers connect, share insights, and sell farm produce directly to buyers while accessing crop recommendations and market opportunities.",
+      "Flinck is an agricultural social marketplace that helps farmers connect, share insights, and sell farm produce directly to buyers while accessing crop recommendations and market opportunities.",
     url: "https://getflink.pro",
-    siteName: "Flink",
+    siteName: "Flinck",
     images: [
       {
         url: "/logo.jpg",
         width: 1200,
         height: 630,
-        alt: "Flink Agricultural Social Network for Farmers",
+        alt: "Flinck Agricultural Social Network for Farmers",
       },
     ],
     locale: "en_US",
@@ -75,9 +75,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Flink – Agricultural Social Network & Marketplace for Farmers",
+    title: "Flinck – Agricultural Social Network & Marketplace for Farmers",
     description:
-      "Flink is an agricultural social marketplace that helps farmers connect, share insights, and sell farm produce directly to buyers while accessing crop recommendations and market opportunities.",
+      "Flinck is an agricultural social marketplace that helps farmers connect, share insights, and sell farm produce directly to buyers while accessing crop recommendations and market opportunities.",
     images: ["/logo.jpg"],
   },
 
@@ -95,33 +95,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const structuredData = [
-    // ORGANIZATION (Flink)
+    // ORGANIZATION (Flinck)
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      name: "Flink",
+      name: "Flinck",
       url: "https://getflink.pro",
       logo: "https://getflink.pro/logo.jpg",
       description:
-        "Flink is an agricultural social marketplace that helps farmers connect, share insights, and sell farm produce directly to buyers while accessing crop recommendations and market opportunities.",
+        "Flinck is an agricultural social marketplace that helps farmers connect, share insights, and sell farm produce directly to buyers while accessing crop recommendations and market opportunities.",
       founder: {
         "@type": "Person",
         name: "David Uchenna Munachimso",
         url: "https://kingdav.com.ng",
       },
-      sameAs: ["https://x.com/flink_space"],
+      sameAs: ["https://x.com/Flinck_space"],
     },
 
     // PRODUCT / SOFTWARE
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Flink",
+      name: "Flinck",
       applicationCategory: "BusinessApplication",
       operatingSystem: "iOS, Android",
       url: "https://getflink.pro",
       description:
-        "Flink is an agricultural social marketplace that helps farmers connect, share insights, and sell farm produce directly to buyers while accessing crop recommendations and market opportunities.",
+        "Flinck is an agricultural social marketplace that helps farmers connect, share insights, and sell farm produce directly to buyers while accessing crop recommendations and market opportunities.",
       creator: {
         "@type": "Person",
         name: "David Uchenna Munachimso",

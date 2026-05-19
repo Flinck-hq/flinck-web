@@ -10,7 +10,7 @@ import { PLAY_STORE_URL } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Download",
   description:
-    "Join thousands of modern farmers. Download Flink from the Play Store and start optimizing your agricultural trade today.",
+    "Join thousands of modern farmers. Download Flinck from the Play Store and start optimizing your agricultural trade today.",
 };
 
 export default function DownloadPage() {
@@ -30,7 +30,9 @@ export default function DownloadPage() {
                 Ready to Digitizing Your Farm.
               </h1>
               <p className="mt-6 text-xl leading-8 text-slate-600">
-                Join a growing network of farmers and buyers across Africa. Flink is optimized for low-bandwidth environments and high-velocity trade.
+                Join a growing network of farmers and buyers across Africa.
+                Flinck is optimized for low-bandwidth environments and
+                high-velocity trade.
               </p>
               <div className="mt-10">
                 <Button
@@ -47,8 +49,8 @@ export default function DownloadPage() {
             </div>
 
             <div className="relative rounded-[3rem] border border-slate-900/10 bg-white p-4 shadow-2xl">
-               {/* Reusing ScreenshotGrid here for a premium preview */}
-               <ScreenshotGrid />
+              {/* Reusing ScreenshotGrid here for a premium preview */}
+              <ScreenshotGrid />
             </div>
           </div>
         </div>

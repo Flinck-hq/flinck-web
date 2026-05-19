@@ -6,15 +6,11 @@ import { motion } from "framer-motion";
 import {
   ArrowRight,
   BadgeCheck,
-  BellRing,
   ChartColumnBig,
   CloudRainWind,
-  MapPinned,
   MessageSquareMore,
-  ShieldCheck,
   Sparkles,
   Store,
-  Wallet,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiteBackground } from "@/components/site-background";
@@ -24,13 +20,9 @@ import { ScreenshotGrid } from "@/components/screenshot-grid";
 import {
   PLAY_STORE_URL,
   capabilities,
-  faqs,
   highlights,
   pillars,
-  platformModules,
   proofStats,
-  storyCards,
-  testimonials,
 } from "@/lib/site-content";
 
 const workflowSteps = [
@@ -112,7 +104,10 @@ const itemVariants = {
 
 export default function Home() {
   return (
-    <main id="top" className="page-shell min-h-screen overflow-x-clip bg-[#f7f2e8] text-slate-950">
+    <main
+      id="top"
+      className="page-shell min-h-screen overflow-x-clip bg-[#f7f2e8] text-slate-950"
+    >
       <SiteBackground />
       <SiteHeader />
 
@@ -134,7 +129,9 @@ export default function Home() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-7 text-slate-600 sm:text-xl sm:leading-8">
-              Flink combines precision weather intelligence, a high-velocity marketplace, and verified farmer identity into one powerful mobile platform.
+              Flinck combines precision weather intelligence, a high-velocity
+              marketplace, and verified farmer identity into one powerful mobile
+              platform.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -144,7 +141,7 @@ export default function Home() {
                 className="h-14 w-full rounded-full bg-[#163d2a] px-7 text-base text-white hover:bg-[#10281d] sm:w-auto"
               >
                 <a href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
-                  Start Farming with Flink
+                  Start Farming with Flinck
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
@@ -158,7 +155,7 @@ export default function Home() {
               </Button>
             </div>
 
-            <motion.div 
+            <motion.div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -182,7 +179,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "circOut" }}
@@ -191,15 +188,15 @@ export default function Home() {
             <div className="hero-orb absolute -right-8 top-12 h-36 w-36 rounded-full bg-[#d9f99d]/50 blur-3xl" />
             <div className="hero-orb absolute -left-8 bottom-12 h-40 w-40 rounded-full bg-[#f3c97f]/35 blur-3xl" />
 
-            <motion.div 
+            <motion.div
               whileHover={{ y: -10, rotate: -1 }}
               className="relative overflow-hidden rounded-[2.5rem] border border-slate-900/10 bg-white p-2 shadow-[0_40px_100px_rgba(22,61,42,0.15)]"
             >
-              <Image 
-                src="/hero-mockup.png" 
-                alt="Flink App Mockup" 
-                width={1200} 
-                height={1200} 
+              <Image
+                src="/hero-mockup.png"
+                alt="Flinck App Mockup"
+                width={1200}
+                height={1200}
                 className="rounded-[2.2rem] object-cover"
                 priority
               />
@@ -210,7 +207,7 @@ export default function Home() {
 
       {/* PROOF STATS */}
       <section className="px-4 py-8 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -230,7 +227,9 @@ export default function Home() {
               <p className="mt-4 text-lg font-semibold tracking-tight text-slate-950">
                 {item.label}
               </p>
-              <p className="mt-3 text-sm leading-6 text-slate-600">{item.note}</p>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                {item.note}
+              </p>
             </motion.div>
           ))}
         </motion.div>
@@ -240,20 +239,24 @@ export default function Home() {
       <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="max-w-xl"
             >
-              <p className="text-sm uppercase tracking-[0.3em] text-[#1f7a45]">The Flink Mission</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#1f7a45]">
+                The Flinck Mission
+              </p>
               <h2 className="mt-4 text-4xl font-semibold tracking-[-0.05em] text-slate-950 sm:text-5xl lg:text-6xl">
                 Empowering farmers with data and market access.
               </h2>
               <p className="mt-5 text-base leading-8 text-slate-600 sm:text-lg">
-                We provide the tools necessary for farmers to transition from traditional methods to high-performance, data-driven agricultural operations.
+                We provide the tools necessary for farmers to transition from
+                traditional methods to high-performance, data-driven
+                agricultural operations.
               </p>
-              
+
               <div className="mt-10 grid gap-6">
                 {pillars.slice(0, 2).map((item) => {
                   const Icon = item.icon;
@@ -263,8 +266,12 @@ export default function Home() {
                         <Icon className="h-5 w-5" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold tracking-tight text-slate-950">{item.title}</h3>
-                        <p className="mt-2 text-sm text-slate-600">{item.description}</p>
+                        <h3 className="text-xl font-semibold tracking-tight text-slate-950">
+                          {item.title}
+                        </h3>
+                        <p className="mt-2 text-sm text-slate-600">
+                          {item.description}
+                        </p>
                       </div>
                     </div>
                   );
@@ -272,16 +279,16 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               className="relative aspect-[4/5] overflow-hidden rounded-[3rem] border border-slate-900/10 shadow-[0_50px_100px_rgba(0,0,0,0.1)]"
             >
-              <Image 
-                src="/farmer-lifestyle.png" 
-                alt="Modern African Farmer using Flink" 
-                fill 
+              <Image
+                src="/farmer-lifestyle.png"
+                alt="Modern African Farmer using Flinck"
+                fill
                 className="object-cover"
               />
             </motion.div>
@@ -292,19 +299,21 @@ export default function Home() {
       {/* PILLARS SECTION */}
       <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="max-w-3xl"
           >
-            <p className="text-sm uppercase tracking-[0.3em] text-[#1f7a45]">Core Pillars</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#1f7a45]">
+              Core Pillars
+            </p>
             <h2 className="mt-4 text-4xl font-semibold tracking-[-0.05em] text-slate-950 sm:text-5xl lg:text-6xl">
               A comprehensive layer for agricultural excellence.
             </h2>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -323,9 +332,15 @@ export default function Home() {
                   <div className="mb-5 inline-flex rounded-2xl bg-[#163d2a] p-3 text-white shadow-[0_16px_32px_rgba(22,61,42,0.2)]">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <p className="text-[11px] uppercase tracking-[0.28em] text-slate-500">{item.eyebrow}</p>
-                  <h3 className="mt-3 text-xl font-semibold tracking-tight text-slate-950">{item.title}</h3>
-                  <p className="mt-4 text-sm leading-6 text-slate-600">{item.description}</p>
+                  <p className="text-[11px] uppercase tracking-[0.28em] text-slate-500">
+                    {item.eyebrow}
+                  </p>
+                  <h3 className="mt-3 text-xl font-semibold tracking-tight text-slate-950">
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 text-sm leading-6 text-slate-600">
+                    {item.description}
+                  </p>
                 </motion.div>
               );
             })}
@@ -336,7 +351,7 @@ export default function Home() {
       {/* CAPABILITIES GRID */}
       <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             className="grid gap-6 sm:grid-cols-2"
@@ -352,8 +367,12 @@ export default function Home() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#eff8e7] text-[#163d2a]">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="mt-4 text-xl font-semibold tracking-tight text-slate-950">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-600">{item.copy}</p>
+                  <h3 className="mt-4 text-xl font-semibold tracking-tight text-slate-950">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">
+                    {item.copy}
+                  </p>
                 </motion.div>
               );
             })}
@@ -365,10 +384,17 @@ export default function Home() {
             className="relative"
           >
             <div className="relative aspect-[4/5] overflow-hidden rounded-[3rem] border border-slate-900/10 shadow-2xl">
-              <Image src="/marketplace-vibe.png" alt="Marketplace Activity" fill className="object-cover" />
+              <Image
+                src="/marketplace-vibe.png"
+                alt="Marketplace Activity"
+                fill
+                className="object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-8 left-8 text-white">
-                <p className="text-xs uppercase tracking-widest opacity-70">Live Marketplace</p>
+                <p className="text-xs uppercase tracking-widest opacity-70">
+                  Live Marketplace
+                </p>
                 <h3 className="mt-2 text-3xl font-semibold">Real-time Trade</h3>
               </div>
             </div>
@@ -380,7 +406,9 @@ export default function Home() {
       <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
-            <p className="text-sm uppercase tracking-[0.3em] text-[#1f7a45]">Digital Interface</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#1f7a45]">
+              Digital Interface
+            </p>
             <h2 className="mt-4 text-4xl font-semibold tracking-[-0.05em] text-slate-950 sm:text-5xl">
               Precision design for field operations.
             </h2>
@@ -391,22 +419,30 @@ export default function Home() {
 
       {/* FINAL CTA */}
       <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           className="relative mx-auto grid max-w-7xl gap-8 overflow-hidden rounded-[3.5rem] bg-[#101b16] px-8 py-12 text-white shadow-[0_40px_120px_rgba(0,0,0,0.3)] sm:px-10 sm:py-20 lg:grid-cols-[1fr_auto] lg:items-center lg:px-20"
         >
           <div className="absolute inset-0 opacity-10">
-            <Image src="/platform-dashboard.png" alt="" fill className="object-cover grayscale" />
+            <Image
+              src="/platform-dashboard.png"
+              alt=""
+              fill
+              className="object-cover grayscale"
+            />
           </div>
 
           <div className="relative z-10">
-            <p className="text-sm uppercase tracking-[0.3em] text-[#d6f277]">Get Started</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#d6f277]">
+              Get Started
+            </p>
             <h2 className="mt-4 text-4xl font-semibold tracking-[-0.05em] sm:text-6xl">
               Ready to scale your agricultural business?
             </h2>
             <p className="mt-6 text-xl text-white/70">
-              Download Flink today and join the network of modern African farmers.
+              Download Flinck today and join the network of modern African
+              farmers.
             </p>
           </div>
 

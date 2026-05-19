@@ -8,7 +8,7 @@ import { capabilities } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Capabilities",
   description:
-    "Explore Flink's agricultural capabilities: Location-aware weather, crop-specific guidance, and high-visibility marketplace tools.",
+    "Explore Flinck's agricultural capabilities: Location-aware weather, crop-specific guidance, and high-visibility marketplace tools.",
 };
 
 export default function CapabilitiesPage() {
@@ -16,7 +16,7 @@ export default function CapabilitiesPage() {
     <main className="page-shell min-h-screen bg-[#f6f3ea] text-slate-950">
       <SiteBackground />
       <SiteHeader />
-      
+
       <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-16 lg:grid-cols-[1fr_0.8fr] lg:items-center">
@@ -28,15 +28,17 @@ export default function CapabilitiesPage() {
                 Precision Tools for Serious Operators.
               </h1>
               <p className="mt-6 text-xl leading-8 text-slate-600">
-                Flink provides a suite of advanced features designed to enhance productivity, improve market access, and secure long-term trade credibility for agricultural stakeholders.
+                Flinck provides a suite of advanced features designed to enhance
+                productivity, improve market access, and secure long-term trade
+                credibility for agricultural stakeholders.
               </p>
             </div>
-            
+
             <div className="relative aspect-square max-w-md mx-auto overflow-hidden rounded-[3rem] shadow-2xl">
-              <Image 
-                src="/trust-badge.png" 
-                alt="Flink Verified Farmer Security" 
-                fill 
+              <Image
+                src="/trust-badge.png"
+                alt="Flinck Verified Farmer Security"
+                fill
                 className="object-cover"
               />
             </div>

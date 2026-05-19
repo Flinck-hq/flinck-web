@@ -8,7 +8,7 @@ import { pillars } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Platform",
   description:
-    "Explore the Flink platform: Precision weather intelligence, unified marketplace, and secure agricultural management.",
+    "Explore the Flinck platform: Precision weather intelligence, unified marketplace, and secure agricultural management.",
 };
 
 export default function PlatformPage() {
@@ -16,7 +16,7 @@ export default function PlatformPage() {
     <main className="page-shell min-h-screen bg-[#f6f3ea] text-slate-950">
       <SiteBackground />
       <SiteHeader />
-      
+
       <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-16 lg:grid-cols-[1fr_0.9fr] lg:items-center">
@@ -28,15 +28,18 @@ export default function PlatformPage() {
                 Integrated Agricultural Intelligence.
               </h1>
               <p className="mt-6 text-xl leading-8 text-slate-600">
-                Flink is a unified operating layer designed to digitize every stage of the agricultural value chain. From field sensing to final transaction, our platform provides the tools needed for modern farm management.
+                Flinck is a unified operating layer designed to digitize every
+                stage of the agricultural value chain. From field sensing to
+                final transaction, our platform provides the tools needed for
+                modern farm management.
               </p>
             </div>
-            
+
             <div className="relative aspect-video overflow-hidden rounded-[2.5rem] border border-slate-900/10 shadow-[0_40px_100px_rgba(0,0,0,0.15)]">
-              <Image 
-                src="/platform-dashboard.png" 
-                alt="Flink Platform Dashboard" 
-                fill 
+              <Image
+                src="/platform-dashboard.png"
+                alt="Flinck Platform Dashboard"
+                fill
                 className="object-cover"
               />
             </div>
@@ -70,11 +73,12 @@ export default function PlatformPage() {
         <div className="mx-auto max-w-7xl rounded-[3rem] bg-[#163d2a] px-8 py-16 text-white text-center">
           <h2 className="text-4xl font-semibold">Ready to see it in action?</h2>
           <p className="mt-4 text-xl text-white/70 max-w-2xl mx-auto">
-            Our mobile application is designed to be the only tool you need for your daily agricultural operations.
+            Our mobile application is designed to be the only tool you need for
+            your daily agricultural operations.
           </p>
           <div className="mt-10">
             <button className="h-14 rounded-full bg-[#d6f277] px-8 text-slate-950 font-semibold hover:bg-[#c9eb61] transition-colors">
-              Download the Flink App
+              Download the Flinck App
             </button>
           </div>
         </div>

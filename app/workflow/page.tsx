@@ -8,7 +8,7 @@ import { flows } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Workflow",
   description:
-    "Understand the core Flink agricultural workflow: From conditions and planning to listing, discovery, and secure transactions.",
+    "Understand the core Flinck agricultural workflow: From conditions and planning to listing, discovery, and secure transactions.",
 };
 
 export default function WorkflowPage() {
@@ -16,7 +16,7 @@ export default function WorkflowPage() {
     <main className="page-shell min-h-screen bg-[#f6f3ea] text-slate-950">
       <SiteBackground />
       <SiteHeader />
-      
+
       <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -27,15 +27,17 @@ export default function WorkflowPage() {
               From Field to Market.
             </h1>
             <p className="mt-6 text-xl leading-8 text-slate-600">
-              Our streamlined 4-step process ensures that every agricultural decision is backed by data and every transaction is secured by trust.
+              Our streamlined 4-step process ensures that every agricultural
+              decision is backed by data and every transaction is secured by
+              trust.
             </p>
           </div>
 
           <div className="relative mb-20 aspect-video w-full overflow-hidden rounded-[3rem] border border-slate-900/10 shadow-2xl">
-            <Image 
-              src="/workflow-visual.png" 
-              alt="The Flink Workflow Infographic" 
-              fill 
+            <Image
+              src="/workflow-visual.png"
+              alt="The Flinck Workflow Infographic"
+              fill
               className="object-contain bg-white"
             />
           </div>
@@ -54,10 +56,14 @@ export default function WorkflowPage() {
                     {flow}
                   </h3>
                   <p className="mt-2 text-slate-600 leading-7">
-                    {index === 0 && "Assess environmental signals and soil moisture to plan your farming calendar."}
-                    {index === 1 && "Create high-visibility listings for your produce and reach verified buyers instantly."}
-                    {index === 2 && "Coordinate terms, negotiate pricing, and finalize logistics within our secure environment."}
-                    {index === 3 && "Complete trades with verified fulfillment and build your long-term reputation."}
+                    {index === 0 &&
+                      "Assess environmental signals and soil moisture to plan your farming calendar."}
+                    {index === 1 &&
+                      "Create high-visibility listings for your produce and reach verified buyers instantly."}
+                    {index === 2 &&
+                      "Coordinate terms, negotiate pricing, and finalize logistics within our secure environment."}
+                    {index === 3 &&
+                      "Complete trades with verified fulfillment and build your long-term reputation."}
                   </p>
                 </div>
               </div>
