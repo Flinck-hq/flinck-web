@@ -16,7 +16,6 @@ import { Button } from "@/components/ui/button";
 import { SiteBackground } from "@/components/site-background";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { ScreenshotGrid } from "@/components/screenshot-grid";
 import {
   PLAY_STORE_URL,
   capabilities,
@@ -24,60 +23,6 @@ import {
   pillars,
   proofStats,
 } from "@/lib/site-content";
-
-const workflowSteps = [
-  {
-    title: "Precision Intelligence",
-    body: "Actionable weather data and crop guidance to time your farming decisions perfectly.",
-    icon: CloudRainWind,
-  },
-  {
-    title: "Market Visibility",
-    body: "List your inventory on our unified marketplace with high-engagement buyer tools.",
-    icon: Store,
-  },
-  {
-    title: "Secure Negotiation",
-    body: "Direct messaging and trust cues to close deals with verified trade partners.",
-    icon: MessageSquareMore,
-  },
-  {
-    title: "Scale and Grow",
-    body: "Access performance analytics and premium tools to accelerate your agricultural business.",
-    icon: Sparkles,
-  },
-];
-
-const dailySignals = [
-  {
-    eyebrow: "Yield Optimization",
-    title: "Optimal Planting Window Detected",
-    body: "Our precision weather engine has identified the ideal soil moisture conditions for maize planting this week.",
-    icon: CloudRainWind,
-    tone: "from-[#f4fbe7] to-white",
-  },
-  {
-    eyebrow: "Market Velocity",
-    title: "Surge in Regional Demand",
-    body: "Buyer activity for cassava is up 40% in your region. Boost your listing now for maximum exposure.",
-    icon: ChartColumnBig,
-    tone: "from-[#eef4ff] to-white",
-  },
-  {
-    eyebrow: "Trade Security",
-    title: "Verified Identity Completed",
-    body: "Your profile trust score has increased. You are now eligible for priority placement in the explore feed.",
-    icon: BadgeCheck,
-    tone: "from-[#fff3dd] to-white",
-  },
-];
-
-const operatorRail = [
-  "Integrated weather data reduces crop loss by providing specific action windows.",
-  "Marketplace visibility tools connect sellers directly to a verified buyer network.",
-  "Secure identity systems build long-term trade reputation and reduce transaction friction.",
-  "Data-driven insights help operators scale their business with precision and confidence.",
-];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -95,7 +40,7 @@ const itemVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      type: "spring",
+      type: "spring" as const,
       damping: 25,
       stiffness: 100,
     },
@@ -399,21 +344,6 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* SCREENSHOT GRID SECTION */}
-      <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 text-center">
-            <p className="text-sm uppercase tracking-[0.3em] text-[#1f7a45]">
-              Digital Interface
-            </p>
-            <h2 className="mt-4 text-4xl font-semibold tracking-[-0.05em] text-slate-950 sm:text-5xl">
-              Precision design for field operations.
-            </h2>
-          </div>
-          <ScreenshotGrid />
         </div>
       </section>
 

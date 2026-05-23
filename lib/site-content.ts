@@ -2,8 +2,9 @@ import type { LucideIcon } from "lucide-react";
 import {
   ArrowUpRight,
   BarChart3,
-  BellRing,
+  Building2,
   CloudRainWind,
+  Landmark,
   MapPinned,
   MessageSquareMore,
   ShieldCheck,
@@ -11,14 +12,18 @@ import {
   Sparkles,
   Sprout,
   Store,
-  Wallet,
   TrendingUp,
   Users,
+  Wallet,
+  Wheat,
+  BellRing,
 } from "lucide-react";
 
-export const SITE_URL = "https://getflink.pro";
+export const SITE_URL = "https://getflinck.pro";
 export const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.k09dtechnologies.flink";
+export const PARTNER_EMAIL = "partners@flinck.ag";
+export const SUPPORT_EMAIL = "hello@flinck.ag";
 
 export type Highlight = {
   value: string;
@@ -45,12 +50,6 @@ export type ProofStat = {
   note: string;
 };
 
-export type StoryCard = {
-  title: string;
-  text: string;
-  accent: string;
-};
-
 export type Testimonial = {
   name: string;
   role: string;
@@ -62,248 +61,352 @@ export type FaqItem = {
   answer: string;
 };
 
+export type Audience = {
+  slug: string;
+  title: string;
+  tagline: string;
+  description: string;
+  icon: LucideIcon;
+  bullets: string[];
+  ctaLabel: string;
+  ctaHref: string;
+};
+
+export const heroCopy = {
+  eyebrow: "Agricultural social marketplace for everyone in the chain",
+  title: "Where agriculture connects, trades, and grows.",
+  subtitle:
+    "Flinck brings farmers, consumers, businesses, manufacturers, banks, government, and ag investors into one trusted network—social discovery, marketplace execution, and verified trade in a single platform.",
+  primaryCta: "Get the Flinck app",
+  secondaryCta: "Explore how it works",
+};
+
+export const audiences: Audience[] = [
+  {
+    slug: "farmers",
+    title: "Farmers & producers",
+    tagline: "Sell, learn, and build reputation",
+    description:
+      "List harvests, follow market signals, get weather guidance, and grow a verified profile buyers trust.",
+    icon: Wheat,
+    bullets: [
+      "Direct listings with in-app negotiation",
+      "Hyper-local weather and crop guidance",
+      "Reputation that travels with every trade",
+    ],
+    ctaLabel: "Download for Android",
+    ctaHref: PLAY_STORE_URL,
+  },
+  {
+    slug: "buyers",
+    title: "Buyers & consumers",
+    tagline: "Discover and purchase with confidence",
+    description:
+      "Find produce and ag products from verified sellers, compare offers, and coordinate fulfillment in one place.",
+    icon: ShoppingBasket,
+    bullets: [
+      "Search by crop, region, and seller trust",
+      "Secure messaging before you commit",
+      "Transparent pricing and order history",
+    ],
+    ctaLabel: "Start buying on Flinck",
+    ctaHref: PLAY_STORE_URL,
+  },
+  {
+    slug: "businesses",
+    title: "Businesses & manufacturers",
+    tagline: "Procure at scale with clarity",
+    description:
+      "Source from a network of verified suppliers, manage recurring procurement, and reduce middleman friction.",
+    icon: Building2,
+    bullets: [
+      "Bulk and contract-friendly listings",
+      "Supplier verification and trade history",
+      "Logistics coordination in-app",
+    ],
+    ctaLabel: "Request a business demo",
+    ctaHref: "/partners",
+  },
+  {
+    slug: "banks",
+    title: "Banks & fintech",
+    tagline: "Trade-backed financial signals",
+    description:
+      "Explore wallet flows, identity-aligned profiles, and marketplace activity that supports smarter ag finance.",
+    icon: Landmark,
+    bullets: [
+      "Verified user and business profiles",
+      "Transaction and wallet activity context",
+      "Partnership-ready compliance discussions",
+    ],
+    ctaLabel: "Partner with Flinck",
+    ctaHref: "/partners",
+  },
+  {
+    slug: "government",
+    title: "Government & programs",
+    tagline: "Reach and visibility at scale",
+    description:
+      "Support subsidies, traceability, and regional supply programs with data grounded in real marketplace activity.",
+    icon: ShieldCheck,
+    bullets: [
+      "Regional supply and demand visibility",
+      "Program outreach through the network",
+      "Audit-friendly trade records",
+    ],
+    ctaLabel: "Talk to our policy team",
+    ctaHref: "/partners",
+  },
+  {
+    slug: "investors",
+    title: "Agricultural investors",
+    tagline: "Deal flow with ground truth",
+    description:
+      "See operator quality, regional momentum, and trade patterns that inform agribusiness and impact investing.",
+    icon: TrendingUp,
+    bullets: [
+      "Marketplace-derived activity signals",
+      "Operator and cooperative visibility",
+      "Pilot and portfolio partnership options",
+    ],
+    ctaLabel: "Explore investment partnerships",
+    ctaHref: "/partners",
+  },
+];
+
 export const highlights: Highlight[] = [
   {
-    value: "Real-time Intelligence",
+    value: "Social network",
     label:
-      "Integrated weather alerts, crop health monitoring, and precision farming guidance.",
+      "Profiles, community, and shared insights—not only listings in a catalog.",
   },
   {
-    value: "Market Velocity",
+    value: "Marketplace",
     label:
-      "Direct-to-buyer marketplace with boosted visibility and rapid negotiation tools.",
+      "List produce, negotiate, and complete trades with verified counterparties.",
   },
   {
-    value: "Trusted Network",
+    value: "Trust layer",
     label:
-      "Verified farmer identities and reputation systems that ensure secure and credible trade.",
+      "Verification, reputation, and records institutions and buyers can rely on.",
   },
 ];
 
 export const proofStats: ProofStat[] = [
   {
-    value: "Actionable Weather",
-    label:
-      "Precision forecasting that provides specific planting and harvesting windows.",
-    note: "Reduce crop loss and optimize field timing.",
+    value: "Field intelligence",
+    label: "Weather and crop guidance tied to your location and season.",
+    note: "Plan planting, protection, and harvest with actionable signals.",
   },
   {
-    value: "Boosted Sales",
+    value: "Open commerce",
     label:
-      "Marketplace listings with priority visibility for high-demand agricultural products.",
-    note: "Connect with buyers 3x faster than traditional methods.",
+      "List and discover ag products with direct buyer–seller negotiation.",
+    note: "Reduce middlemen where the network supports direct trade.",
   },
   {
-    value: "Verified Trust",
-    label:
-      "Secure profiles and transaction history that build long-term trade credibility.",
-    note: "Eliminate buyer hesitation and secure better deals.",
+    value: "Verified identity",
+    label: "Profiles and trust cues that strengthen every transaction.",
+    note: "Build credibility that buyers, banks, and programs recognize.",
   },
   {
-    value: "Smart Advisory",
-    label:
-      "Contextual AI assistance for pest control, soil management, and market pricing.",
-    note: "Data-driven decisions for every stage of the season.",
+    value: "Institutional ready",
+    label: "Partnership paths for banks, government, and investors.",
+    note: "Scale beyond peer-to-peer when your organization is ready.",
   },
 ];
 
 export const pillars: FeatureCard[] = [
   {
-    icon: CloudRainWind,
-    eyebrow: "Precision",
-    title: "Intelligence-Led Farming",
+    icon: Users,
+    eyebrow: "Social",
+    title: "Community & discovery",
     description:
-      "Hyper-local weather data and crop-specific guidance help you act at the perfect moment to maximize yield.",
+      "Follow operators, share updates, and learn from a network built for agriculture—not generic social noise.",
   },
   {
     icon: Store,
     eyebrow: "Commerce",
-    title: "Unified Agricultural Marketplace",
+    title: "Unified marketplace",
     description:
-      "List, promote, and sell your produce directly to a network of verified buyers with zero middlemen friction.",
+      "List, promote, and sell with tools for individuals, cooperatives, and institutional procurement.",
   },
   {
-    icon: Users,
-    eyebrow: "Community",
-    title: "Verified Trade Ecosystem",
+    icon: CloudRainWind,
+    eyebrow: "Intelligence",
+    title: "Precision for the field",
     description:
-      "Build a professional reputation with a verified identity that facilitates secure and repeated business interactions.",
+      "Location-aware weather and crop guidance so decisions on the farm match conditions in the market.",
   },
   {
     icon: Wallet,
-    eyebrow: "Growth",
-    title: "Financial Operating Layer",
+    eyebrow: "Finance",
+    title: "Payments & growth",
     description:
-      "Manage payments, track marketplace performance, and access premium tools to scale your agricultural operations.",
+      "Wallet flows, performance visibility, and partnership lanes for banks and ag finance.",
   },
 ];
 
 export const capabilities: FeatureCard[] = [
   {
     icon: MapPinned,
-    title: "Location-Specific Alerts",
-    copy: "Get notified about weather shifts and market demands specifically relevant to your exact farm location.",
+    title: "Location-specific alerts",
+    copy: "Weather and market signals relevant to your farm or operating region.",
   },
   {
     icon: Sprout,
-    title: "Crop Management",
-    copy: "Access detailed guidance for planting, protection, and harvesting based on real-time environmental data.",
+    title: "Crop management",
+    copy: "Guidance for planting, protection, and harvest across diverse operations.",
   },
   {
     icon: ShoppingBasket,
-    title: "Direct Marketplace Access",
-    copy: "Showcase your produce to a broad audience of buyers with clear pricing and high-visibility listing options.",
+    title: "Marketplace listings",
+    copy: "Showcase produce and ag products with clear pricing and discovery tools.",
   },
   {
     icon: MessageSquareMore,
-    title: "Integrated Negotiation",
-    copy: "Chat directly with buyers and sellers within the app to finalize deals and coordinate logistics securely.",
+    title: "In-app negotiation",
+    copy: "Chat with buyers and sellers to agree terms and coordinate delivery.",
   },
   {
     icon: BellRing,
-    title: "Critical Notifications",
-    copy: "Never miss a planting window, a buyer offer, or a market opportunity with our intelligent alert system.",
+    title: "Critical notifications",
+    copy: "Offers, weather windows, and market opportunities you should not miss.",
   },
   {
     icon: TrendingUp,
-    title: "Performance Insights",
-    copy: "Monitor your listing views, buyer engagement, and sales trends to refine your market strategy.",
-  },
-];
-
-export const storyCards: StoryCard[] = [
-  {
-    title: "Analyze",
-    text: "Review field conditions and weather forecasts to determine the optimal actions for the day.",
-    accent: "bg-[#d9f99d] text-[#25410f]",
-  },
-  {
-    title: "Connect",
-    text: "List produce and engage with buyers through our secure, high-visibility marketplace interface.",
-    accent: "bg-[#f6d08d] text-[#5a3510]",
-  },
-  {
-    title: "Grow",
-    text: "Build a verified track record and use data-driven insights to scale your farming business.",
-    accent: "bg-[#c7e5ff] text-[#153756]",
+    title: "Performance insights",
+    copy: "Engagement and sales trends to refine how you show up in the network.",
   },
 ];
 
 export const platformModules: FeatureCard[] = [
   {
     icon: Sparkles,
-    eyebrow: "Assistance",
-    title: "Contextual AI Advisory",
+    eyebrow: "Guidance",
+    title: "Contextual advisory",
     description:
-      "Receive expert guidance on crop health and market trends directly within your daily operational workflow.",
+      "Crop health and market context inside the workflows you already use daily.",
   },
   {
     icon: BarChart3,
     eyebrow: "Data",
-    title: "Operational Analytics",
+    title: "Operational analytics",
     description:
-      "Track every aspect of your farm's performance and marketplace reach with detailed, easy-to-read data.",
+      "Visibility into listings, reach, and trade activity across your operation.",
   },
   {
     icon: ShieldCheck,
-    eyebrow: "Security",
-    title: "Reputation Management",
+    eyebrow: "Trust",
+    title: "Reputation management",
     description:
-      "Maintain a verified profile that serves as your professional resume in the agricultural trade network.",
+      "A verified profile that works like a professional record in the ag economy.",
   },
   {
     icon: ArrowUpRight,
-    eyebrow: "Velocity",
-    title: "Optimized Trade Loops",
+    eyebrow: "Scale",
+    title: "Efficient trade loops",
     description:
-      "Reduce the time between harvesting and selling with tools designed for maximum market efficiency.",
+      "Shorter paths from harvest to buyer with coordination built into the app.",
   },
 ];
 
 export const testimonials: Testimonial[] = [
   {
     name: "Amina Yusuf",
-    role: "Commercial Vegetable Farmer",
+    role: "Commercial vegetable farmer",
     quote:
-      "Flink provides the exact data I need to manage my harvests effectively. The marketplace visibility has significantly increased my monthly sales.",
+      "Flinck gives me weather context and buyer reach in one place. My listings get serious inquiries—not random messages.",
   },
   {
     name: "Daniel Kofi",
-    role: "Institutional Produce Buyer",
+    role: "Institutional produce buyer",
     quote:
-      "The verified identity system on Flink has completely changed how I source produce. I can trade with confidence and speed.",
+      "Verified profiles changed how we source. We negotiate faster because trust is visible before we commit.",
   },
   {
     name: "Esther Njeri",
-    role: "Agricultural Cooperative Manager",
+    role: "Agricultural cooperative manager",
     quote:
-      "Integrating weather alerts with marketplace access in one app is a game-changer for our members' productivity.",
+      "Our members finally have a network that respects both field work and market access. It feels built for cooperatives.",
   },
 ];
 
 export const faqs: FaqItem[] = [
   {
-    question: "How does Flink verify users?",
+    question: "Who is Flinck for?",
     answer:
-      "We use a multi-step verification process that includes identity checks and reputation tracking to ensure all participants are credible and professional.",
+      "Flinck is for everyone in agriculture: farmers, consumers, businesses, manufacturers, banks, government programs, and agricultural investors. Each group gets tools matched to how they buy, sell, finance, or govern ag trade.",
   },
   {
-    question: "Can I manage multiple crops on Flink?",
+    question: "How does Flinck verify users?",
     answer:
-      "Yes. Flink is designed to support diverse agricultural operations, providing specific guidance and marketplace categories for a wide range of crops.",
+      "We use progressive verification—identity checks, trade history, and reputation signals—so trust grows with real activity on the platform.",
   },
   {
-    question: "How do weather alerts work?",
+    question: "Is Flinck only a marketplace?",
     answer:
-      "We use hyper-local meteorological data to send you specific, actionable notifications about planting, protection, and harvesting windows based on your farm's location.",
+      "No. It is a social marketplace: community and discovery plus listings, negotiation, payments, and partnership paths for institutions.",
   },
   {
-    question: "Is there a cost to use the marketplace?",
+    question: "How do banks or government partner?",
     answer:
-      "Basic listings are free. We offer premium visibility and analytics tools for operators who want to accelerate their growth and reach more buyers.",
+      "Visit our Partners page or email partners@flinck.ag. We scope data sharing, compliance, and rollout geography before any integration.",
+  },
+  {
+    question: "Is the app available on iOS?",
+    answer:
+      "Flinck is available on Android today via Google Play. iOS availability will be announced on this site when ready.",
+  },
+  {
+    question: "What does it cost to list produce?",
+    answer:
+      "Basic listings are free. Premium visibility and analytics are available for operators who want to accelerate reach.",
   },
 ];
 
 export const screenshots: Screenshot[] = [
   {
     src: "/home.jpg",
-    alt: "Flink home dashboard showing wallet, quick actions, and weather insights",
+    alt: "Flinck home dashboard with wallet, quick actions, and weather insights",
     tone: "from-[#1f7a45]/18 via-[#d6f277]/12 to-[#ffffff]",
   },
   {
     src: "/profile.jpg",
-    alt: "Flink profile screen showing farmer identity, wallet card, and app navigation",
+    alt: "Flinck profile screen showing identity, wallet, and navigation",
     tone: "from-[#163d2a]/12 via-[#d9a441]/14 to-[#fff7e8]",
   },
   {
     src: "/hero-mockup.png",
-    alt: "Flink 3D app mockup showing weather alerts and crop health",
+    alt: "Flinck app mockup with weather and crop health",
     tone: "from-[#2756db]/12 via-[#1f7a45]/10 to-[#ffffff]",
   },
   {
     src: "/farmer-lifestyle.png",
-    alt: "African farmer using Flink on a smartphone in a maize field",
+    alt: "Farmer using Flinck in the field",
     tone: "from-[#f4fbe7] via-[#eef4ff] to-white",
-  },
-  {
-    src: "/marketplace-vibe.png",
-    alt: "Vibrant marketplace with fresh cassava and maize",
-    tone: "from-[#fff3dd] via-[#eef4ff] to-white",
   },
 ];
 
 export const navLinks = [
-  { href: "/platform", label: "Platform" },
-  { href: "/capabilities", label: "Capabilities" },
-  { href: "/workflow", label: "Workflow" },
+  { href: "/how-it-works", label: "How it works" },
+  { href: "/blog", label: "Blog" },
+  { href: "/partners", label: "Partners" },
   { href: "/download", label: "Download" },
-  { href: "/policy", label: "Policy" },
-  { href: "/terms", label: "Terms" },
+  { href: "/policy", label: "Privacy" },
 ];
 
 export const flows: string[] = [
-  "Monitor and Assess Conditions",
-  "List and Promote Inventory",
-  "Negotiate and Secure Deals",
-  "Settle and Scale Operations",
+  "Connect in the network",
+  "List and discover inventory",
+  "Negotiate and secure deals",
+  "Settle, grow reputation, and scale",
 ];
+
+export function getAudience(slug: string): Audience | undefined {
+  return audiences.find((a) => a.slug === slug);
+}
+
+export function getAllAudienceSlugs(): string[] {
+  return audiences.map((a) => a.slug);
+}

@@ -1,28 +1,72 @@
 import Link from "next/link";
-import { PLAY_STORE_URL, navLinks } from "@/lib/site-content";
+import {
+  PLAY_STORE_URL,
+  PARTNER_EMAIL,
+  navLinks,
+  audiences,
+} from "@/lib/site-content";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-slate-900/8 px-4 py-10 sm:px-6 lg:px-8">
-      <div className="mx-auto flex max-w-7xl flex-col gap-6 text-sm text-slate-600 md:flex-row md:items-end md:justify-between">
-        <div className="max-w-xl">
-          <p className="text-base font-semibold tracking-tight text-slate-950">
-            Flinck
-          </p>
-          <p className="mt-2 leading-7">
-            Premium agri intelligence, marketplace execution, and mobile-first
-            farmer workflows built for real trade.
-          </p>
+    <footer className="border-t border-slate-900/8 px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <div className="lg:col-span-2">
+            <p className="text-lg font-semibold text-slate-950">Flinck</p>
+            <p className="mt-3 max-w-md text-sm leading-7 text-slate-600">
+              Agricultural social marketplace connecting farmers, buyers,
+              businesses, banks, government, and investors across Africa.
+            </p>
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.24em] text-slate-500">
+              Explore
+            </p>
+            <ul className="mt-4 space-y-2 text-sm">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-slate-600 hover:text-slate-950"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <a
+                  href={PLAY_STORE_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-slate-600 hover:text-slate-950"
+                >
+                  Google Play
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.24em] text-slate-500">
+              Who it&apos;s for
+            </p>
+            <ul className="mt-4 space-y-2 text-sm">
+              {audiences.map((a) => (
+                <li key={a.slug}>
+                  <Link
+                    href={`/for/${a.slug}`}
+                    className="text-slate-600 hover:text-slate-950"
+                  >
+                    {a.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-
-        <div className="flex flex-wrap gap-x-5 gap-y-3">
-          {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="hover:text-slate-950">
-              {link.label}
-            </Link>
-          ))}
-          <a href={PLAY_STORE_URL} target="_blank" rel="noreferrer" className="hover:text-slate-950">
-            Play Store
+        <div className="mt-10 flex flex-col gap-3 border-t border-slate-900/8 pt-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} Flinck. All rights reserved.</p>
+          <a href={`mailto:${PARTNER_EMAIL}`} className="hover:text-slate-950">
+            {PARTNER_EMAIL}
           </a>
         </div>
       </div>
