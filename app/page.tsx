@@ -195,9 +195,9 @@ export default function Home() {
               <Image
                 src="/hero-mockup.png"
                 alt="Flinck App Mockup"
-                width={1200}
-                height={1200}
-                className="rounded-[2.2rem] object-cover"
+                width={500}
+                height={500}
+                className="rounded-[2.5rem] object-cover"
                 priority
               />
             </motion.div>

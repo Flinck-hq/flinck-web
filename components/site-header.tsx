@@ -31,7 +31,7 @@ export function SiteHeader() {
           >
             <Image
               src="/logo.jpg"
-              alt="Flink logo"
+              alt="Flinck logo"
               width={44}
               height={44}
               className="h-11 w-11 object-cover"
@@ -40,7 +40,7 @@ export function SiteHeader() {
           </motion.div>
           <div>
             <p className="text-base font-semibold tracking-tight sm:text-lg">
-              Flink
+              Flinck
             </p>
             <p className="hidden text-xs uppercase tracking-[0.24em] text-slate-500 sm:block">
               Precision for modern farming
@@ -102,7 +102,7 @@ export function SiteHeader() {
                       Site menu
                     </p>
                     <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">
-                      Explore Flink
+                      Explore Flinck
                     </p>
                   </div>
 

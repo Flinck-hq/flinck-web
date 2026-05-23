@@ -298,6 +298,7 @@ export const navLinks = [
   { href: "/workflow", label: "Workflow" },
   { href: "/download", label: "Download" },
   { href: "/policy", label: "Policy" },
+  { href: "/terms", label: "Terms" },
 ];
 
 export const flows: string[] = [

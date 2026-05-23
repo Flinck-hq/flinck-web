@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-7xl flex-col gap-6 text-sm text-slate-600 md:flex-row md:items-end md:justify-between">
         <div className="max-w-xl">
           <p className="text-base font-semibold tracking-tight text-slate-950">
-            Flink
+            Flinck
           </p>
           <p className="mt-2 leading-7">
             Premium agri intelligence, marketplace execution, and mobile-first
