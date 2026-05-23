@@ -1,20 +1,13 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { CookieConsent } from "@/components/cookie-consent";
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-});
-
 export const metadata: Metadata = {
-  metadataBase: new URL("https://getflink.pro"),
-  alternate: {
-    canonical: "https://getflink.pro",
+  metadataBase: new URL("https://getflinck.pro"),
+  alternates: {
+    canonical: "https://getflinck.pro",
   },
   icons: {
     icon: [
@@ -26,12 +19,13 @@ export const metadata: Metadata = {
   },
 
   title: {
-    default: "Flinck – Agricultural Social Network & Marketplace for Farmers",
+    default:
+      "Flinck – Agricultural Social Marketplace for Farmers, Buyers & Institutions",
     template: "%s | Flinck",
   },
 
   description:
-    "Flinck is an agricultural social marketplace that helps farmers connect, share insights, and sell farm produce directly to buyers while accessing crop recommendations and market opportunities.",
+    "Flinck is the agricultural social marketplace connecting farmers, consumers, businesses, manufacturers, banks, government, and ag investors—trade, trust, and grow in one network.",
 
   applicationName: "Flinck",
 
@@ -56,10 +50,11 @@ export const metadata: Metadata = {
   publisher: "Flinck",
 
   openGraph: {
-    title: "Flinck – Agricultural Social Network & Marketplace for Farmers",
+    title:
+      "Flinck – Agricultural Social Marketplace for Farmers, Buyers & Institutions",
     description:
-      "Flinck is an agricultural social marketplace that helps farmers connect, share insights, and sell farm produce directly to buyers while accessing crop recommendations and market opportunities.",
-    url: "https://getflink.pro",
+      "Flinck is the agricultural social marketplace connecting farmers, consumers, businesses, banks, government, and ag investors.",
+    url: "https://getflinck.pro",
     siteName: "Flinck",
     images: [
       {
@@ -75,9 +70,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Flinck – Agricultural Social Network & Marketplace for Farmers",
+    title:
+      "Flinck – Agricultural Social Marketplace for Farmers, Buyers & Institutions",
     description:
-      "Flinck is an agricultural social marketplace that helps farmers connect, share insights, and sell farm produce directly to buyers while accessing crop recommendations and market opportunities.",
+      "Flinck is the agricultural social marketplace connecting farmers, consumers, businesses, banks, government, and ag investors.",
     images: ["/logo.jpg"],
   },
 
@@ -100,10 +96,10 @@ export default function RootLayout({
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "Flinck",
-      url: "https://getflink.pro",
-      logo: "https://getflink.pro/logo.jpg",
+      url: "https://getflinck.pro",
+      logo: "https://getflinck.pro/logo.jpg",
       description:
-        "Flinck is an agricultural social marketplace that helps farmers connect, share insights, and sell farm produce directly to buyers while accessing crop recommendations and market opportunities.",
+        "Flinck is the agricultural social marketplace connecting farmers, consumers, businesses, banks, government, and ag investors.",
       founder: {
         "@type": "Person",
         name: "David Uchenna Munachimso",
@@ -118,10 +114,10 @@ export default function RootLayout({
       "@type": "SoftwareApplication",
       name: "Flinck",
       applicationCategory: "BusinessApplication",
-      operatingSystem: "iOS, Android",
-      url: "https://getflink.pro",
+      operatingSystem: "Android",
+      url: "https://getflinck.pro",
       description:
-        "Flinck is an agricultural social marketplace that helps farmers connect, share insights, and sell farm produce directly to buyers while accessing crop recommendations and market opportunities.",
+        "Flinck is the agricultural social marketplace for farmers, buyers, businesses, banks, government, and ag investors.",
       creator: {
         "@type": "Person",
         name: "David Uchenna Munachimso",
@@ -136,9 +132,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body
-        className={`${geist.variable} ${geistMono.variable} font-sans antialiased`}
-      >
+      <body className="font-sans antialiased">
         <CookieConsent />
         {children}
 
