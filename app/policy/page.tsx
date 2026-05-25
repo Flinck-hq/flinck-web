@@ -2,10 +2,26 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowLeft, ShieldCheck } from "lucide-react";
 
+import { SITE_URL } from "@/lib/site-content";
+
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Read the Flinck privacy policy covering account information, permissions, payments, notifications, security, retention and user rights.",
+  openGraph: {
+    title: "Privacy Policy | Flinck",
+    description:
+      "Read the Flinck privacy policy covering account information, permissions, payments, notifications, security, retention and user rights.",
+    url: `${SITE_URL}/policy`,
+    images: [{ url: `${SITE_URL}/trust-badge.png`, alt: "Flinck Privacy Policy" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | Flinck",
+    description:
+      "Read the Flinck privacy policy covering account information, permissions, payments, notifications, security, retention and user rights.",
+    images: [`${SITE_URL}/trust-badge.png`],
+  },
 };
 
 type Section = {

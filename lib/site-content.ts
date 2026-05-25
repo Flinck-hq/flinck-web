@@ -20,7 +20,6 @@ export const SITE_URL = "https://getflinck.pro";
 export const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.k09dtechnologies.flink";
 export const SPONSOR_EMAIL = "sponsor@flinck.app";
-export const SUPPORT_EMAIL = "sponsor@flinck.app";
 
 export type Highlight = {
   value: string;

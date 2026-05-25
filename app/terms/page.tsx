@@ -5,10 +5,26 @@ import { SiteBackground } from "@/components/site-background";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
+import { SITE_URL } from "@/lib/site-content";
+
 export const metadata: Metadata = {
   title: "Terms and Conditions",
   description:
     "Read the Flinck terms and conditions of use. Learn about user accounts, marketplace transactions, fees, wallet guidelines, and liability policies.",
+  openGraph: {
+    title: "Terms and Conditions | Flinck",
+    description:
+      "Read the Flinck terms and conditions of use. Learn about user accounts, marketplace transactions, fees, wallet guidelines, and liability policies.",
+    url: `${SITE_URL}/terms`,
+    images: [{ url: `${SITE_URL}/trust-badge.png`, alt: "Flinck Terms and Conditions" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms and Conditions | Flinck",
+    description:
+      "Read the Flinck terms and conditions of use. Learn about user accounts, marketplace transactions, fees, wallet guidelines, and liability policies.",
+    images: [`${SITE_URL}/trust-badge.png`],
+  },
 };
 
 type Section = {

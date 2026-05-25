@@ -22,6 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPost(slug);
   if (!post) return { title: "Post not found" };
 
+  const imageUrl = post.coverImage ? `${SITE_URL}${post.coverImage}` : `${SITE_URL}/farmer-lifestyle.png`;
+
   return {
     title: post.title,
     description: post.description,
@@ -32,9 +34,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `${SITE_URL}/blog/${post.slug}`,
       type: "article",
       publishedTime: post.publishedAt,
-      images: post.coverImage
-        ? [{ url: post.coverImage, alt: post.title }]
-        : undefined,
+      images: [{ url: imageUrl, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: [imageUrl],
     },
   };
 }

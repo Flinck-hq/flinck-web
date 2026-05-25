@@ -21,10 +21,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const audience = getAudience(slug);
   if (!audience) return { title: "Not found" };
 
+  let imagePath = "/platform-dashboard.png";
+  if (slug === "farmers") imagePath = "/farmer-lifestyle.png";
+  else if (slug === "buyers" || slug === "businesses") imagePath = "/marketplace-vibe.png";
+
+  const imageUrl = `${SITE_URL}${imagePath}`;
+
   return {
     title: audience.title,
     description: audience.description,
     alternates: { canonical: `${SITE_URL}/for/${slug}` },
+    openGraph: {
+      title: `${audience.title} | Flinck`,
+      description: audience.description,
+      url: `${SITE_URL}/for/${slug}`,
+      images: [{ url: imageUrl, alt: audience.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${audience.title} | Flinck`,
+      description: audience.description,
+      images: [imageUrl],
+    },
   };
 }
 

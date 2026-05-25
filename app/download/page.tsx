@@ -10,6 +10,20 @@ export const metadata: Metadata = {
   description:
     "Download Flinck for Android—agricultural social marketplace for farmers, buyers, and the wider ag economy.",
   alternates: { canonical: `${SITE_URL}/download` },
+  openGraph: {
+    title: "Download | Flinck",
+    description:
+      "Download Flinck for Android—agricultural social marketplace for farmers, buyers, and the wider ag economy.",
+    url: `${SITE_URL}/download`,
+    images: [{ url: `${SITE_URL}/hero-mockup.png`, alt: "Download Flinck" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Download | Flinck",
+    description:
+      "Download Flinck for Android—agricultural social marketplace for farmers, buyers, and the wider ag economy.",
+    images: [`${SITE_URL}/hero-mockup.png`],
+  },
 };
 
 export default function DownloadPage() {

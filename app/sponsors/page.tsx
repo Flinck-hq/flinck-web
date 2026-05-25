@@ -16,6 +16,20 @@ export const metadata: Metadata = {
   description:
     "Sponsor Flinck and support the open digital infrastructure for smallholder farmers. We work with leading global organizations, banks, and agribusinesses.",
   alternates: { canonical: `${SITE_URL}/sponsors` },
+  openGraph: {
+    title: "Sponsors | Flinck",
+    description:
+      "Sponsor Flinck and support the open digital infrastructure for smallholder farmers. We work with leading global organizations, banks, and agribusinesses.",
+    url: `${SITE_URL}/sponsors`,
+    images: [{ url: `${SITE_URL}/platform-dashboard.png`, alt: "Flinck Sponsors" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sponsors | Flinck",
+    description:
+      "Sponsor Flinck and support the open digital infrastructure for smallholder farmers. We work with leading global organizations, banks, and agribusinesses.",
+    images: [`${SITE_URL}/platform-dashboard.png`],
+  },
 };
 
 const sponsorTiers = [
@@ -108,15 +122,10 @@ export default function SponsorsPage() {
                   className="h-16 w-full sm:w-auto rounded-full bg-[#d6f277] px-10 text-lg font-semibold text-slate-950 hover:bg-[#c9eb61] shadow-lg"
                 >
                   <a href={`mailto:${SPONSOR_EMAIL}?subject=Flinck%20Sponsorship%20Inquiry`}>
-                    Email our sponsorship team
+                    Sponsor Flinck
                   </a>
                 </Button>
               </div>
-
-              <p className="mt-6 flex items-center justify-center gap-2 text-sm font-medium text-white/60">
-                <Mail className="h-4 w-4 text-[#d6f277]" />
-                {SPONSOR_EMAIL}
-              </p>
             </div>
           </div>
 

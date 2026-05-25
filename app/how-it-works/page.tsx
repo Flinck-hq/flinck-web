@@ -16,6 +16,20 @@ export const metadata: Metadata = {
   description:
     "How Flinck connects the agricultural value chain—from social discovery and listings to negotiation, trust, and ecosystem sponsorships.",
   alternates: { canonical: `${SITE_URL}/how-it-works` },
+  openGraph: {
+    title: "How it works | Flinck",
+    description:
+      "How Flinck connects the agricultural value chain—from social discovery and listings to negotiation, trust, and ecosystem sponsorships.",
+    url: `${SITE_URL}/how-it-works`,
+    images: [{ url: `${SITE_URL}/workflow-visual.png`, alt: "Flinck platform workflow" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How it works | Flinck",
+    description:
+      "How Flinck connects the agricultural value chain—from social discovery and listings to negotiation, trust, and ecosystem sponsorships.",
+    images: [`${SITE_URL}/workflow-visual.png`],
+  },
 };
 
 const flowDetails = [
