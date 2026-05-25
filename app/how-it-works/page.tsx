@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = {
   title: "How it works",
   description:
-    "How Flinck connects the agricultural value chain—from social discovery and listings to negotiation, trust, and institutional partnerships.",
+    "How Flinck connects the agricultural value chain—from social discovery and listings to negotiation, trust, and ecosystem sponsorships.",
   alternates: { canonical: `${SITE_URL}/how-it-works` },
 };
 
@@ -22,7 +22,7 @@ const flowDetails = [
   "Join the network with a profile suited to how you grow, buy, finance, or govern.",
   "Create listings or discover inventory with search, trust cues, and regional context.",
   "Negotiate terms and coordinate logistics in a secure in-app environment.",
-  "Complete trades, grow reputation, and unlock partnership paths when you scale.",
+  "Complete trades, grow reputation, and unlock sponsorship lanes when you scale.",
 ];
 
 export default function HowItWorksPage() {
@@ -40,7 +40,7 @@ export default function HowItWorksPage() {
               </h1>
               <p className="mt-6 text-xl leading-8 text-slate-600">
                 Flinck is a social marketplace: community and discovery, unified
-                commerce, field intelligence, and institutional partnership
+                commerce, field intelligence, and institutional sponsorship
                 lanes—built for everyone in agriculture.
               </p>
               <Button
@@ -140,10 +140,10 @@ export default function HowItWorksPage() {
 
           <div className="mt-16 text-center">
             <Link
-              href="/partners"
+              href="/sponsors"
               className="text-sm font-semibold text-[#163d2a] hover:underline"
             >
-              Institutional partner? Talk to us →
+              Interested in sponsorship? Talk to us →
             </Link>
           </div>
         </div>

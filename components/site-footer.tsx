@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {
   PLAY_STORE_URL,
-  PARTNER_EMAIL,
+  SPONSOR_EMAIL,
   navLinks,
   audiences,
 } from "@/lib/site-content";
@@ -15,7 +15,7 @@ export function SiteFooter() {
             <p className="text-lg font-semibold text-slate-950">Flinck</p>
             <p className="mt-3 max-w-md text-sm leading-7 text-slate-600">
               Agricultural social marketplace connecting farmers, buyers,
-              businesses, banks, government, and investors across Africa.
+              businesses, banks, government, and sponsors across Africa.
             </p>
           </div>
           <div>
@@ -65,8 +65,8 @@ export function SiteFooter() {
         </div>
         <div className="mt-10 flex flex-col gap-3 border-t border-slate-900/8 pt-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Flinck. All rights reserved.</p>
-          <a href={`mailto:${PARTNER_EMAIL}`} className="hover:text-slate-950">
-            {PARTNER_EMAIL}
+          <a href={`mailto:${SPONSOR_EMAIL}`} className="hover:text-slate-950">
+            {SPONSOR_EMAIL}
           </a>
         </div>
       </div>

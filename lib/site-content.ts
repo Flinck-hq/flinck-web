@@ -1,7 +1,5 @@
 import type { LucideIcon } from "lucide-react";
 import {
-  ArrowUpRight,
-  BarChart3,
   Building2,
   CloudRainWind,
   Landmark,
@@ -9,7 +7,6 @@ import {
   MessageSquareMore,
   ShieldCheck,
   ShoppingBasket,
-  Sparkles,
   Sprout,
   Store,
   TrendingUp,
@@ -22,12 +19,13 @@ import {
 export const SITE_URL = "https://getflinck.pro";
 export const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.k09dtechnologies.flink";
-export const PARTNER_EMAIL = "partners@flinck.ag";
-export const SUPPORT_EMAIL = "hello@flinck.ag";
+export const SPONSOR_EMAIL = "sponsor@flinck.app";
+export const SUPPORT_EMAIL = "sponsor@flinck.app";
 
 export type Highlight = {
   value: string;
   label: string;
+  note: string;
 };
 
 export type FeatureCard = {
@@ -44,7 +42,7 @@ export type Screenshot = {
   tone: string;
 };
 
-export type ProofStat = {
+export type ProofStats = {
   value: string;
   label: string;
   note: string;
@@ -124,8 +122,8 @@ export const audiences: Audience[] = [
       "Supplier verification and trade history",
       "Logistics coordination in-app",
     ],
-    ctaLabel: "Request a business demo",
-    ctaHref: "/partners",
+    ctaLabel: "Sponsor our supply chain",
+    ctaHref: "/sponsors",
   },
   {
     slug: "banks",
@@ -137,10 +135,10 @@ export const audiences: Audience[] = [
     bullets: [
       "Verified user and business profiles",
       "Transaction and wallet activity context",
-      "Partnership-ready compliance discussions",
+      "Sponsorship-aligned development lanes",
     ],
-    ctaLabel: "Partner with Flinck",
-    ctaHref: "/partners",
+    ctaLabel: "Sponsor Flinck Ecosystem",
+    ctaHref: "/sponsors",
   },
   {
     slug: "government",
@@ -154,23 +152,50 @@ export const audiences: Audience[] = [
       "Program outreach through the network",
       "Audit-friendly trade records",
     ],
-    ctaLabel: "Talk to our policy team",
-    ctaHref: "/partners",
+    ctaLabel: "Become an institutional sponsor",
+    ctaHref: "/sponsors",
   },
   {
     slug: "investors",
-    title: "Agricultural investors",
-    tagline: "Deal flow with ground truth",
+    title: "Ag agribusiness sponsors",
+    tagline: "Ecosystem enablement with ground truth",
     description:
       "See operator quality, regional momentum, and trade patterns that inform agribusiness and impact investing.",
     icon: TrendingUp,
     bullets: [
       "Marketplace-derived activity signals",
       "Operator and cooperative visibility",
-      "Pilot and portfolio partnership options",
+      "Sponsorship and ecosystem grants",
     ],
-    ctaLabel: "Explore investment partnerships",
-    ctaHref: "/partners",
+    ctaLabel: "Explore sponsorship tiers",
+    ctaHref: "/sponsors",
+  },
+];
+
+export const proofStats: ProofStats[] = [
+  {
+    value: "Actionable Weather",
+    label:
+      "Precision forecasting that provides specific planting and harvesting windows.",
+    note: "Reduce crop loss and optimize field timing.",
+  },
+  {
+    value: "Boosted Sales",
+    label:
+      "Marketplace listings with priority visibility for high-demand agricultural products.",
+    note: "Connect with buyers 3x faster than traditional methods.",
+  },
+  {
+    value: "Verified Trust",
+    label:
+      "Secure profiles and transaction history that build long-term trade credibility.",
+    note: "Eliminate buyer hesitation and secure better deals.",
+  },
+  {
+    value: "Smart Advisory",
+    label:
+      "Contextual AI assistance for pest control, soil management, and market pricing.",
+    note: "Advice should feel built into the workflow.",
   },
 ];
 
@@ -178,25 +203,8 @@ export const highlights: Highlight[] = [
   {
     value: "Social network",
     label:
-      "Profiles, community, and shared insights—not only listings in a catalog.",
-  },
-  {
-    value: "Marketplace",
-    label:
-      "List produce, negotiate, and complete trades with verified counterparties.",
-  },
-  {
-    value: "Trust layer",
-    label:
-      "Verification, reputation, and records institutions and buyers can rely on.",
-  },
-];
-
-export const proofStats: ProofStat[] = [
-  {
-    value: "Field intelligence",
-    label: "Weather and crop guidance tied to your location and season.",
-    note: "Plan planting, protection, and harvest with actionable signals.",
+      "Follow updates, exchange advice, and verify operators inside a vertical platform.",
+    note: "No algorithmic distractions, just agriculture.",
   },
   {
     value: "Open commerce",
@@ -207,12 +215,12 @@ export const proofStats: ProofStat[] = [
   {
     value: "Verified identity",
     label: "Profiles and trust cues that strengthen every transaction.",
-    note: "Build credibility that buyers, banks, and programs recognize.",
+    note: "Build credibility that buyers, sponsors, and programs recognize.",
   },
   {
-    value: "Institutional ready",
-    label: "Partnership paths for banks, government, and investors.",
-    note: "Scale beyond peer-to-peer when your organization is ready.",
+    value: "Ecosystem sponsored",
+    label: "Sponsorship lanes for banks, government, and global foundations.",
+    note: "Ecosystem-supported infrastructure built for public good, just like Vercel.",
   },
 ];
 
@@ -243,7 +251,7 @@ export const pillars: FeatureCard[] = [
     eyebrow: "Finance",
     title: "Payments & growth",
     description:
-      "Wallet flows, performance visibility, and partnership lanes for banks and ag finance.",
+      "Wallet flows, performance visibility, and sponsored integration lanes for ag finance.",
   },
 ];
 
@@ -260,75 +268,44 @@ export const capabilities: FeatureCard[] = [
   },
   {
     icon: ShoppingBasket,
-    title: "Marketplace listings",
-    copy: "Showcase produce and ag products with clear pricing and discovery tools.",
+    title: "Clear product listing",
+    copy: "Display crops, terms, and photos to buyers with standardized trust cues.",
   },
   {
     icon: MessageSquareMore,
-    title: "In-app negotiation",
-    copy: "Chat with buyers and sellers to agree terms and coordinate delivery.",
+    title: "Direct chat & negotiation",
+    copy: "Communicate directly to arrange pricing, transport, and delivery.",
   },
   {
     icon: BellRing,
-    title: "Critical notifications",
-    copy: "Offers, weather windows, and market opportunities you should not miss.",
+    title: "Action loops",
+    copy: "Weather alerts, message notices, and payment updates that keep users engaged.",
   },
   {
     icon: TrendingUp,
-    title: "Performance insights",
-    copy: "Engagement and sales trends to refine how you show up in the network.",
-  },
-];
-
-export const platformModules: FeatureCard[] = [
-  {
-    icon: Sparkles,
-    eyebrow: "Guidance",
-    title: "Contextual advisory",
-    description:
-      "Crop health and market context inside the workflows you already use daily.",
-  },
-  {
-    icon: BarChart3,
-    eyebrow: "Data",
-    title: "Operational analytics",
-    description:
-      "Visibility into listings, reach, and trade activity across your operation.",
-  },
-  {
-    icon: ShieldCheck,
-    eyebrow: "Trust",
-    title: "Reputation management",
-    description:
-      "A verified profile that works like a professional record in the ag economy.",
-  },
-  {
-    icon: ArrowUpRight,
-    eyebrow: "Scale",
-    title: "Efficient trade loops",
-    description:
-      "Shorter paths from harvest to buyer with coordination built into the app.",
+    title: "Reach & growth options",
+    copy: "Standard, premium, and boosted placement templates to capture demand.",
   },
 ];
 
 export const testimonials: Testimonial[] = [
   {
     name: "Amina Yusuf",
-    role: "Commercial vegetable farmer",
+    role: "Vegetable farmer, Kaduna",
     quote:
-      "Flinck gives me weather context and buyer reach in one place. My listings get serious inquiries—not random messages.",
+      "I used to rely on multiple middlemen who took most of the profit. Now I list directly and find verified buyers within hours.",
   },
   {
     name: "Daniel Kofi",
-    role: "Institutional produce buyer",
+    role: "Produce buyer, Accra",
     quote:
-      "Verified profiles changed how we source. We negotiate faster because trust is visible before we commit.",
+      "The identity layer makes a huge difference. Seeing verified farmers and their past trading history gives me confidence.",
   },
   {
     name: "Esther Njeri",
-    role: "Agricultural cooperative manager",
+    role: "Cooperative lead, Nakuru",
     quote:
-      "Our members finally have a network that respects both field work and market access. It feels built for cooperatives.",
+      "Having weather intelligence, crop tracking, and marketplace access in one phone interface saves us hours of manual planning every week.",
   },
 ];
 
@@ -336,7 +313,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Who is Flinck for?",
     answer:
-      "Flinck is for everyone in agriculture: farmers, consumers, businesses, manufacturers, banks, government programs, and agricultural investors. Each group gets tools matched to how they buy, sell, finance, or govern ag trade.",
+      "Flinck is for farmers, food buyers, input sellers, cooperative leads, and agribusiness operators who need clean discovery and secure transaction layers on mobile.",
   },
   {
     question: "How does Flinck verify users?",
@@ -346,12 +323,12 @@ export const faqs: FaqItem[] = [
   {
     question: "Is Flinck only a marketplace?",
     answer:
-      "No. It is a social marketplace: community and discovery plus listings, negotiation, payments, and partnership paths for institutions.",
+      "No. It is a social marketplace: community and discovery plus listings, negotiation, payments, and sponsorship paths for institutions.",
   },
   {
-    question: "How do banks or government partner?",
+    question: "How do banks or government sponsor?",
     answer:
-      "Visit our Partners page or email partners@flinck.ag. We scope data sharing, compliance, and rollout geography before any integration.",
+      "Visit our Sponsors page or email sponsors@flinck.ag. We scope data sharing, compliance, and rollout geography before any integration.",
   },
   {
     question: "Is the app available on iOS?",
@@ -391,7 +368,7 @@ export const screenshots: Screenshot[] = [
 export const navLinks = [
   { href: "/how-it-works", label: "How it works" },
   { href: "/blog", label: "Blog" },
-  { href: "/partners", label: "Partners" },
+  { href: "/sponsors", label: "Sponsors" },
   { href: "/download", label: "Download" },
   { href: "/policy", label: "Privacy" },
 ];

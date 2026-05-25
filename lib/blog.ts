@@ -16,7 +16,7 @@ export const blogPosts: BlogPost[] = [
     slug: "what-is-flinck",
     title: "What Is Flinck? The Agricultural Social Marketplace Explained",
     description:
-      "How Flinck connects farmers, buyers, businesses, banks, government, and investors in one trusted ag network.",
+      "How Flinck connects farmers, buyers, businesses, banks, government, and sponsors in one trusted ag network.",
     publishedAt: "2026-03-01",
     author: "Flinck Team",
     category: "Product",
@@ -25,15 +25,15 @@ export const blogPosts: BlogPost[] = [
     body: [
       "Flinck is an agricultural social marketplace built for everyone in the value chain—not only farmers. It combines community, commerce, and trust so produce can move from field to buyer with less friction and more transparency.",
       "Farmers use Flinck to share updates, list harvests, access weather guidance, and build a verified reputation. Buyers and consumers discover produce, negotiate in-app, and coordinate logistics. Businesses and manufacturers source at scale with clearer supplier identity.",
-      "Banks and fintech partners can lean on verified profiles and trade signals for smarter lending and payment flows. Government and development programs gain better visibility into regional supply. Agricultural investors see deal flow grounded in real marketplace activity.",
-      "Unlike a single-purpose farm app, Flinck is designed as a network: social discovery plus marketplace execution plus institutional trust layers that grow with each successful trade.",
+      "Banks and fintech sponsors can lean on verified profiles and trade signals for smarter lending and payment flows. Government and development programs gain better visibility into regional supply. Agricultural sponsors see deal flow grounded in real marketplace activity.",
+      "Unlike a single-purpose farm app, Flinck is designed as a network: social discovery plus marketplace execution plus sponsored trust layers that grow with each successful trade.",
     ],
   },
   {
     slug: "building-trust-in-ag-trade",
     title: "Why Verification Matters in Agricultural Marketplaces",
     description:
-      "Trust tiers, reputation, and secure negotiation reduce risk for farmers, buyers, and institutional partners.",
+      "Trust tiers, reputation, and secure negotiation reduce risk for farmers, buyers, and ecosystem sponsors.",
     publishedAt: "2026-03-10",
     author: "Flinck Team",
     category: "Trust",
@@ -46,19 +46,19 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "partnerships-banks-government-investors",
-    title: "Partnering with Flinck: Banks, Government, and Ag Investors",
+    slug: "sponsorships-banks-government-investors",
+    title: "Sponsoring Flinck: Banks, Government, and Ag Ecosystem",
     description:
-      "How institutions plug into Flinck for procurement visibility, program reach, and investment intelligence.",
+      "How institutions plug into Flinck for procurement visibility, program reach, and investment intelligence via sponsorships.",
     publishedAt: "2026-03-18",
     author: "Flinck Team",
-    category: "Partners",
+    category: "Sponsors",
     readMinutes: 7,
     coverImage: "/marketplace-vibe.png",
     body: [
-      "Flinck is building partnership lanes for organizations that need agricultural market infrastructure—not another disconnected pilot app.",
-      "Banks and fintech teams can explore wallet flows, KYC-aligned profiles, and trade-backed signals. Government and NGO partners can improve last-mile program delivery and traceability. Investors and cooperatives can monitor regional activity and supplier quality.",
-      "If you represent a bank, ministry, development agency, or ag investment fund, reach out through our Partners page. We will align on data scope, compliance, and rollout geography before any integration work begins.",
+      "Flinck is building sponsorship lanes for organizations that need agricultural market infrastructure—not another disconnected pilot app.",
+      "Banks and fintech teams can explore wallet flows, KYC-aligned profiles, and trade-backed signals. Government and NGO sponsors can improve last-mile program delivery and traceability. Agribusiness sponsors and cooperatives can monitor regional activity and supplier quality.",
+      "If you represent a bank, ministry, development agency, or ag investment fund, reach out through our Sponsors page. We will align on data scope, compliance, and rollout geography before any sponsorship begins.",
     ],
   },
 ];

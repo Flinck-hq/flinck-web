@@ -48,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           ![
             "/how-it-works",
             "/blog",
-            "/partners",
+            "/sponsors",
             "/download",
             "/policy",
           ].includes(link.href),

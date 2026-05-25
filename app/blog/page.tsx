@@ -9,7 +9,7 @@ import { SITE_URL } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "News and insights from Flinck on agricultural marketplaces, trust, partnerships, and the future of ag trade in Africa.",
+    "News and insights from Flinck on agricultural marketplaces, trust, sponsorships, and the future of ag trade in Africa.",
   alternates: { canonical: `${SITE_URL}/blog` },
 };
 
@@ -28,7 +28,7 @@ export default function BlogPage() {
               Ideas for a connected agricultural economy.
             </h1>
             <p className="mt-6 text-lg leading-8 text-slate-600">
-              Product updates, trust in ag trade, and partnership perspectives
+              Product updates, trust in ag trade, and sponsorship perspectives
               for farmers, buyers, and institutions.
             </p>
           </div>

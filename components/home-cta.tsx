@@ -22,8 +22,7 @@ export function HomeCta() {
             Join the agricultural network built for everyone.
           </h2>
           <p className="mt-6 max-w-xl text-lg text-white/70">
-            Download Flinck on Android or partner with us if you represent a
-            bank, government program, or investment team.
+            Download Flinck on Android or become a sponsor to support the open agricultural infrastructure.
           </p>
         </div>
         <div className="relative z-10 flex flex-col gap-4 sm:flex-row lg:flex-col">
@@ -42,7 +41,7 @@ export function HomeCta() {
             variant="outline"
             className="h-14 rounded-full border-white/30 bg-transparent px-8 text-base text-white hover:bg-white/10"
           >
-            <a href="/partners">Partner with Flinck</a>
+            <a href="/sponsors">Sponsor Flinck</a>
           </Button>
         </div>
       </div>

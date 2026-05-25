@@ -5,12 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
-  BadgeCheck,
-  ChartColumnBig,
-  CloudRainWind,
-  MessageSquareMore,
   Sparkles,
-  Store,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiteBackground } from "@/components/site-background";

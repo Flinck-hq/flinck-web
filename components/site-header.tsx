@@ -133,11 +133,11 @@ export function SiteHeader() {
                       Download app
                     </a>
                     <Link
-                      href="/partners"
+                      href="/sponsors"
                       onClick={closeMenu}
                       className="rounded-[1.2rem] border border-slate-900/8 px-5 py-3 text-center font-medium"
                     >
-                      Partner with us
+                      Sponsor Flinck
                     </Link>
                   </div>
                 </div>
