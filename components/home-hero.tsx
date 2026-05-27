@@ -1,27 +1,20 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { heroCopy, highlights, PLAY_STORE_URL } from "@/lib/site-content";
 
 export function HomeHero() {
   return (
-    <section className="relative px-4 pb-16 pt-8 sm:px-6 sm:pb-24 sm:pt-16 lg:px-8 lg:pb-28">
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="reveal-card mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-[#163d2a]/12 bg-white/78 px-4 py-2 text-xs text-slate-700 shadow-sm backdrop-blur sm:text-sm">
-            <Sparkles className="h-4 w-4 text-[#1f7a45]" />
+    <section className="relative px-4 pb-12 pt-6 sm:px-6 sm:pb-24 sm:pt-16 lg:px-8 lg:pb-28">
+      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-12">
+        <div>
+          <div className="reveal-card mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-[#163d2a]/12 bg-white/78 px-3 py-2 text-[11px] leading-5 text-slate-700 shadow-sm backdrop-blur sm:mb-6 sm:px-4 sm:text-sm">
+            <Sparkles className="h-4 w-4 shrink-0 text-[#1f7a45]" />
             {heroCopy.eyebrow}
           </div>
 
-          <h1 className="max-w-4xl text-4xl font-semibold leading-[1.02] tracking-[-0.04em] text-slate-950 sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-4xl text-[2.65rem] font-semibold leading-[0.98] tracking-[-0.04em] text-slate-950 sm:text-5xl sm:leading-[1.02] lg:text-6xl">
             {heroCopy.title}
           </h1>
 
@@ -33,7 +26,7 @@ export function HomeHero() {
             <Button
               asChild
               size="lg"
-              className="h-14 w-full rounded-full bg-[#163d2a] px-7 text-base text-white hover:bg-[#10281d] sm:w-auto"
+              className="h-[3.25rem] w-full rounded-full bg-[#163d2a] px-5 text-sm text-white hover:bg-[#10281d] sm:h-14 sm:w-auto sm:px-7 sm:text-base"
             >
               <a href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
                 {heroCopy.primaryCta}
@@ -44,7 +37,7 @@ export function HomeHero() {
               asChild
               size="lg"
               variant="outline"
-              className="h-14 w-full rounded-full border-slate-300 bg-white/70 px-7 text-base text-slate-900 hover:bg-white sm:w-auto"
+              className="h-[3.25rem] w-full rounded-full border-slate-300 bg-white/70 px-5 text-sm text-slate-900 hover:bg-white sm:h-14 sm:w-auto sm:px-7 sm:text-base"
             >
               <Link href="/how-it-works">{heroCopy.secondaryCta}</Link>
             </Button>
@@ -65,25 +58,23 @@ export function HomeHero() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7 }}
-          className="relative"
-        >
-          <div className="relative overflow-hidden rounded-[2.5rem] border border-slate-900/10 bg-white p-2 shadow-[0_40px_100px_rgba(22,61,42,0.15)]">
+        <div className="relative">
+          <div
+            data-cookie-trigger
+            className="relative mx-auto max-w-sm overflow-hidden rounded-[1.75rem] border border-slate-900/10 bg-white p-2 shadow-[0_28px_70px_rgba(22,61,42,0.14)] sm:max-w-none sm:rounded-[2.5rem] sm:shadow-[0_40px_100px_rgba(22,61,42,0.15)]"
+          >
             <Image
               src="/hero-mockup.png"
               alt="Flinck mobile app"
               width={1200}
               height={1200}
-              className="rounded-[2.2rem] object-cover"
+              className="h-auto w-full rounded-[1.5rem] object-cover sm:rounded-[2.2rem]"
               priority
             />
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -74,7 +74,8 @@ export const platformModules = [
     icon: Users,
     eyebrow: "Social",
     title: "Community & discovery",
-    description: "Follow updates, exchange advice, and verify operators inside a vertical platform.",
+    description:
+      "Follow updates, exchange advice, and verify operators inside a vertical platform.",
     copy: "No algorithmic distractions, just agriculture.",
     href: "/how-it-works",
   },
@@ -82,7 +83,8 @@ export const platformModules = [
     icon: ShoppingBasket,
     eyebrow: "Commerce",
     title: "Open marketplace",
-    description: "List and discover ag products with direct buyer–seller negotiation.",
+    description:
+      "List and discover ag products with direct buyer–seller negotiation.",
     copy: "Reduce middlemen where the network supports direct trade.",
     href: "/how-it-works",
   },
@@ -98,7 +100,8 @@ export const platformModules = [
     icon: Building2,
     eyebrow: "Ecosystem",
     title: "Sponsorship & enablement",
-    description: "Sponsorship lanes for banks, government, and global foundations.",
+    description:
+      "Sponsorship lanes for banks, government, and global foundations.",
     copy: "Public infrastructure built for the entire agricultural value chain.",
     href: "/sponsors",
   },
@@ -377,16 +380,6 @@ export const faqs: FaqItem[] = [
 ];
 
 export const screenshots: Screenshot[] = [
-  {
-    src: "/home.jpg",
-    alt: "Flinck home dashboard with wallet, quick actions, and weather insights",
-    tone: "from-[#1f7a45]/18 via-[#d6f277]/12 to-[#ffffff]",
-  },
-  {
-    src: "/profile.jpg",
-    alt: "Flinck profile screen showing identity, wallet, and navigation",
-    tone: "from-[#163d2a]/12 via-[#d9a441]/14 to-[#fff7e8]",
-  },
   {
     src: "/hero-mockup.png",
     alt: "Flinck app mockup with weather and crop health",

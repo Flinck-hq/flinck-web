@@ -1,9 +1,8 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 import { CookieConsent } from "@/components/cookie-consent";
+import { SiteAnalytics } from "@/components/site-analytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://getflinck.pro"),
@@ -179,8 +178,7 @@ export default function RootLayout({
           }}
         />
 
-        <Analytics />
-        <SpeedInsights/>
+        <SiteAnalytics />
       </body>
     </html>
   );

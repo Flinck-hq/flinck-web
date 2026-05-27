@@ -83,13 +83,13 @@ export default async function AudiencePage({ params }: Props) {
           <div className="mt-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#163d2a] text-white">
             <Icon className="h-7 w-7" />
           </div>
-          <p className="mt-6 text-sm uppercase tracking-[0.28em] text-[#1f7a45]">
+          <p className="mt-6 text-xs uppercase tracking-[0.2em] text-[#1f7a45] sm:text-sm sm:tracking-[0.28em]">
             {audience.tagline}
           </p>
-          <h1 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-5xl">
+          <h1 className="mt-4 text-4xl font-semibold tracking-[-0.035em] text-slate-950 sm:text-5xl sm:tracking-[-0.04em]">
             {audience.title}
           </h1>
-          <p className="mt-6 text-lg leading-8 text-slate-600">
+          <p className="mt-6 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
             {audience.description}
           </p>
 
@@ -106,7 +106,7 @@ export default async function AudiencePage({ params }: Props) {
             <Button
               asChild
               size="lg"
-              className="h-14 rounded-full bg-[#163d2a] px-8 text-white hover:bg-[#10281d]"
+              className="h-[3.25rem] w-full rounded-full bg-[#163d2a] px-6 text-white hover:bg-[#10281d] sm:h-14 sm:w-auto sm:px-8"
             >
               {isExternal ? (
                 <a
