@@ -65,13 +65,11 @@ export default function Home() {
             </div>
 
             <h1 className="max-w-5xl text-[3rem] font-semibold leading-[0.92] tracking-[-0.075em] text-slate-950 sm:text-[4.8rem] lg:text-[6.4rem]">
-              The operating system for African agriculture.
+              The complete agricultural social marketplace for Africa.
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-7 text-slate-600 sm:text-xl sm:leading-8">
-              Flinck combines precision weather intelligence, a high-velocity
-              marketplace, and verified farmer identity into one powerful mobile
-              platform.
+              Flinck is the leading agricultural social marketplace built to connect farmers and buyers. Easily sell farm produce online, discover fresh harvests, check weather signals, and trade directly with verified partners.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">

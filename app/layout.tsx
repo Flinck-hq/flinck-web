@@ -20,27 +20,30 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "Flinck – Agricultural Social Marketplace for Farmers, Buyers & Institutions",
+      "Flinck – Agricultural Social Marketplace to Buy & Sell Farm Produce",
     template: "%s | Flinck",
   },
 
   description:
-    "Flinck is the agricultural social marketplace connecting farmers, consumers, businesses, manufacturers, banks, government, and ag investors—trade, trust, and grow in one network.",
+    "Flinck is the leading agricultural social marketplace where farmers sell farm produce online and buyers procure directly. Find where to buy and sell crops, grains, and fresh farm products with zero middleman fees.",
 
   applicationName: "Flinck",
 
   keywords: [
+    "agricultural marketplace",
+    "where can i sell my farm produce",
+    "sell farm produce online",
+    "where can i buy farm produce direct",
+    "buy farm produce online",
     "Flinck",
     "Flinck AgriTech",
     "AgriTech Nigeria",
     "Agricultural social network",
-    "Agricultural marketplace",
     "Farmers marketplace",
     "Farming app Africa",
     "Smart farming",
     "Crop recommendations",
     "Farm market platform",
-    "Sell farm produce online",
     "Agriculture technology",
     "Smallholder farmers",
   ],
@@ -51,14 +54,14 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "Flinck – Agricultural Social Marketplace for Farmers, Buyers & Institutions",
+      "Flinck – Premium Agricultural Social Marketplace to Buy & Sell Farm Produce",
     description:
-      "Flinck is the agricultural social marketplace connecting farmers, consumers, businesses, banks, government, and ag investors.",
+      "Flinck is the leading agricultural social marketplace where farmers sell farm produce online and buyers procure directly. Find where to buy and sell crops, grains, and fresh farm products with zero middleman fees.",
     url: "https://getflinck.pro",
     siteName: "Flinck",
     images: [
       {
-        url: "/logo.jpg",
+        url: "/icon.jpg",
         width: 1200,
         height: 630,
         alt: "Flinck Agricultural Social Network for Farmers",
@@ -71,10 +74,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Flinck – Agricultural Social Marketplace for Farmers, Buyers & Institutions",
+      "Flinck – Premium Agricultural Social Marketplace to Buy & Sell Farm Produce",
     description:
-      "Flinck is the agricultural social marketplace connecting farmers, consumers, businesses, banks, government, and ag investors.",
-    images: ["/logo.jpg"],
+      "Flinck is the leading agricultural social marketplace where farmers sell farm produce online and buyers procure directly. Find where to buy and sell crops, grains, and fresh farm products with zero middleman fees.",
+    images: ["/farmer-lifestyle.png"],
   },
 
   robots: {
@@ -128,6 +131,38 @@ export default function RootLayout({
         priceCurrency: "USD",
       },
     },
+
+    // FAQPage Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where can I sell my farm produce online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can sell your farm produce online directly to buyers using Flinck, the premium agricultural marketplace. Flinck allows farmers to list harvests, negotiate pricing in-app, build verified reputations, and eliminate middleman friction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I buy fresh agricultural products and farm produce direct?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Flinck is the ultimate platform where you can buy high-quality farm produce and agricultural products directly from verified farmers. Standardized profiles and secure communication guarantee trusted transactions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best digital agricultural marketplace in Africa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Flinck is widely recognized as the premier agricultural social marketplace in Africa. It bridges peer-to-peer commerce, weather intelligence, trust scoring, and institutional integration in one cohesive network."
+          }
+        }
+      ]
+    }
   ];
 
   return (

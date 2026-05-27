@@ -27,20 +27,35 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const imageUrl = `${SITE_URL}${imagePath}`;
 
+  // SEO optimizations
+  let seoTitle = `${audience.title} | Flinck Agricultural Marketplace`;
+  let seoDescription = audience.description;
+
+  if (slug === "farmers") {
+    seoTitle = "Where Can I Sell My Farm Produce Online? | Flinck for Farmers";
+    seoDescription = "Are you a farmer wondering: where can I sell my farm produce online? Join Flinck, the leading agricultural marketplace, and sell directly to buyers with zero middleman fees.";
+  } else if (slug === "buyers") {
+    seoTitle = "Where Can I Buy Farm Produce Direct? | Flinck for Buyers";
+    seoDescription = "Wondering where to buy agricultural products and fresh farm produce direct from local farmers? Flinck offers progress-verified digital commerce.";
+  } else if (slug === "businesses") {
+    seoTitle = "Wholesale Agricultural Marketplace | Procure Farm Produce at Scale";
+    seoDescription = "Access high-quality agricultural goods and crops from verified operators. Streamline your agribusiness and food manufacturing supply chain with Flinck.";
+  }
+
   return {
-    title: audience.title,
-    description: audience.description,
+    title: seoTitle,
+    description: seoDescription,
     alternates: { canonical: `${SITE_URL}/for/${slug}` },
     openGraph: {
-      title: `${audience.title} | Flinck`,
-      description: audience.description,
+      title: seoTitle,
+      description: seoDescription,
       url: `${SITE_URL}/for/${slug}`,
       images: [{ url: imageUrl, alt: audience.title }],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${audience.title} | Flinck`,
-      description: audience.description,
+      title: seoTitle,
+      description: seoDescription,
       images: [imageUrl],
     },
   };
