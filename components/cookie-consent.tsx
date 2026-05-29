@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { Cookie, X } from "lucide-react";
 
 const CONSENT_KEY = "flinck-cookie-consent";
 const CONSENT_EVENT = "flinck-cookie-consent-change";
