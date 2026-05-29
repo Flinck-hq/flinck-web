@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { PLAY_STORE_URL, navLinks } from "@/lib/site-content";
 
 export function SiteHeader() {
@@ -34,7 +32,7 @@ export function SiteHeader() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-slate-900/10 bg-[#f6f3ea]/90 backdrop-blur-xl">
+    <nav className="relative sticky top-0 z-50 border-b border-slate-900/10 bg-[#f6f3ea]/90 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-3 py-3 sm:px-6 sm:py-4 lg:px-8">
         <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3">
           <div className="shrink-0 overflow-hidden rounded-xl border border-slate-900/8 bg-white shadow-[0_12px_30px_rgba(22,61,42,0.12)] sm:rounded-2xl">
@@ -44,6 +42,7 @@ export function SiteHeader() {
               width={44}
               height={44}
               className="h-10 w-10 object-cover sm:h-11 sm:w-11"
+              priority
             />
           </div>
           <div className="min-w-0">
@@ -69,21 +68,20 @@ export function SiteHeader() {
         </div>
 
         <div className="hidden items-center gap-3 md:flex">
-          <Button
-            asChild
-            variant="outline"
-            className="rounded-full border-slate-300 bg-white/80"
+          <Link
+            href="/sponsors"
+            className="inline-flex h-10 items-center justify-center rounded-full border border-slate-300 bg-white/80 px-4 text-sm font-medium text-slate-900 transition hover:bg-white"
           >
-            <Link href="/sponsors">Sponsors</Link>
-          </Button>
-          <Button
-            asChild
-            className="rounded-full bg-[#163d2a] text-white hover:bg-[#10281d]"
+            Sponsors
+          </Link>
+          <a
+            href={PLAY_STORE_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex h-10 items-center justify-center rounded-full bg-[#163d2a] px-4 text-sm font-medium text-white transition hover:bg-[#10281d]"
           >
-            <a href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
-              Download
-            </a>
-          </Button>
+            Download
+          </a>
         </div>
 
         <button
@@ -93,7 +91,17 @@ export function SiteHeader() {
           onClick={() => setMenuOpen((open) => !open)}
           className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-slate-900/8 bg-white text-slate-900 shadow-sm lg:hidden"
         >
-          {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          <span className="relative h-4 w-5" aria-hidden="true">
+            <span
+              className={`absolute left-0 top-0 h-0.5 w-5 rounded-full bg-current transition ${menuOpen ? "translate-y-[7px] rotate-45" : ""}`}
+            />
+            <span
+              className={`absolute left-0 top-[7px] h-0.5 w-5 rounded-full bg-current transition ${menuOpen ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`absolute left-0 top-[14px] h-0.5 w-5 rounded-full bg-current transition ${menuOpen ? "-translate-y-[7px] -rotate-45" : ""}`}
+            />
+          </span>
         </button>
       </div>
 
@@ -118,10 +126,13 @@ export function SiteHeader() {
                   type="button"
                   onClick={closeMenu}
                   aria-label="Close site menu"
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-slate-900/8 bg-[#f7f2e8] text-slate-900"
-                >
-                  <X className="h-5 w-5" />
-                </button>
+                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-slate-900/8 bg-[#f7f2e8] text-slate-900"
+              >
+                <span className="relative h-5 w-5" aria-hidden="true">
+                  <span className="absolute left-0 top-1/2 h-0.5 w-5 -translate-y-1/2 rotate-45 rounded-full bg-current" />
+                  <span className="absolute left-0 top-1/2 h-0.5 w-5 -translate-y-1/2 -rotate-45 rounded-full bg-current" />
+                </span>
+              </button>
               </div>
               <div className="mt-5 grid gap-2">
                 {navLinks.map((link) => (

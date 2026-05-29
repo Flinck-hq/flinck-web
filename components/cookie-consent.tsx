@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Cookie, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const CONSENT_KEY = "flinck-cookie-consent";
 const CONSENT_EVENT = "flinck-cookie-consent-change";
@@ -85,19 +83,20 @@ export function CookieConsent() {
               </Link>
             </p>
             <div className="mt-3 grid grid-cols-2 gap-2 sm:mt-5">
-              <Button
+              <button
+                type="button"
                 onClick={() => setConsent("accepted")}
-                className="h-10 rounded-full bg-[#163d2a] text-xs text-white hover:bg-[#0f2a1d] sm:h-11 sm:text-sm"
+                className="inline-flex h-10 items-center justify-center rounded-full bg-[#163d2a] text-xs font-medium text-white transition hover:bg-[#0f2a1d] sm:h-11 sm:text-sm"
               >
                 Accept
-              </Button>
-              <Button
+              </button>
+              <button
+                type="button"
                 onClick={() => setConsent("declined")}
-                variant="outline"
-                className="h-10 rounded-full text-xs sm:h-11 sm:text-sm"
+                className="inline-flex h-10 items-center justify-center rounded-full border border-slate-300 bg-white text-xs font-medium text-slate-900 transition hover:bg-slate-50 sm:h-11 sm:text-sm"
               >
                 Decline
-              </Button>
+              </button>
             </div>
           </div>
         </div>
