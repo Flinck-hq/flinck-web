@@ -35,6 +35,7 @@ const nextConfig = {
       {
         source: '/share/:path*',
         destination: 'https://srv.getflink.pro/share/:path*', // Secretly proxies the Flinck backend!
+        permanent: true,
       },
     ];
   },
