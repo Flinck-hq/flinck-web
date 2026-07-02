@@ -32,6 +32,10 @@ const nextConfig = {
         destination: "/how-it-works",
         permanent: true,
       },
+      {
+        source: '/share/:path*',
+        destination: 'https://srv.getflink.pro/share/:path*', // Secretly proxies the Flinck backend!
+      },
     ];
   },
 };
