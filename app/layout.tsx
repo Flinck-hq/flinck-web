@@ -1,8 +1,16 @@
 import React from "react";
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { CookieConsent } from "@/components/cookie-consent";
 import { SiteAnalytics } from "@/components/site-analytics";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://getflinck.pro"),
@@ -16,18 +24,14 @@ export const metadata: Metadata = {
     shortcut: "/icon.jpg",
     apple: "/icon.jpg",
   },
-
   title: {
     default:
       "Flinck – Agricultural Social Marketplace to Buy & Sell Farm Produce",
     template: "%s | Flinck",
   },
-
   description:
     "Flinck is the leading agricultural social marketplace where farmers sell farm produce online and buyers procure directly. Find where to buy and sell crops, grains, and fresh farm products with zero middleman fees.",
-
   applicationName: "Flinck",
-
   keywords: [
     "agricultural marketplace",
     "where can i sell my farm produce",
@@ -46,16 +50,13 @@ export const metadata: Metadata = {
     "Agriculture technology",
     "Smallholder farmers",
   ],
-
   authors: [{ name: "David Uchenna" }],
   creator: "David Uchenna",
   publisher: "Flinck",
-
   openGraph: {
-    title:
-      "Flinck – Premium Agricultural Social Marketplace to Buy & Sell Farm Produce",
+    title: "Flinck – Premium Agricultural Social Marketplace to Buy & Sell Farm Produce",
     description:
-      "Flinck is the leading agricultural social marketplace where farmers sell farm produce online and buyers procure directly. Find where to buy and sell crops, grains, and fresh farm products with zero middleman fees.",
+      "Flinck is the leading agricultural social marketplace where farmers sell farm produce online and buyers procure directly.",
     url: "https://getflinck.pro",
     siteName: "Flinck",
     images: [
@@ -69,22 +70,17 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
-    title:
-      "Flinck – Premium Agricultural Social Marketplace to Buy & Sell Farm Produce",
+    title: "Flinck – Premium Agricultural Social Marketplace to Buy & Sell Farm Produce",
     description:
-      "Flinck is the leading agricultural social marketplace where farmers sell farm produce online and buyers procure directly. Find where to buy and sell crops, grains, and fresh farm products with zero middleman fees.",
+      "Flinck is the leading agricultural social marketplace where farmers sell farm produce online and buyers procure directly.",
     images: ["/farmer-lifestyle.png"],
   },
-
   robots: {
     index: true,
     follow: true,
   },
-
-  generator: "Next.js",
 };
 
 export default function RootLayout({
@@ -93,7 +89,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const structuredData = [
-    // ORGANIZATION (Flinck)
     {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -109,8 +104,6 @@ export default function RootLayout({
       },
       sameAs: ["https://x.com/Flinck_space"],
     },
-
-    // PRODUCT / SOFTWARE
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -130,8 +123,6 @@ export default function RootLayout({
         priceCurrency: "USD",
       },
     },
-
-    // FAQPage Schema
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -149,7 +140,7 @@ export default function RootLayout({
           "name": "Where can I buy fresh agricultural products and farm produce direct?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Flinck is the ultimate platform where you can buy high-quality farm produce and agricultural products directly from verified farmers. Standardized profiles and secure communication guarantee trusted transactions."
+            "text": "Flinck is the ultimate platform where you can buy high-quality farm produce and agricultural products directly from verified farmers."
           }
         },
         {
@@ -165,19 +156,16 @@ export default function RootLayout({
   ];
 
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <body className="font-sans antialiased">
         <CookieConsent />
         {children}
-
-        {/* Structured Data for Google */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData),
           }}
         />
-
         <SiteAnalytics />
       </body>
     </html>
