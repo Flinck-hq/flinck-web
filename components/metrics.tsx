@@ -16,12 +16,12 @@ export function Metrics() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section ref={ref} className="relative bg-[#FBFBFD] py-20 sm:py-28">
+    <section ref={ref} className="relative bg-[#f5f0e5] py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
         <div className="grid gap-6 sm:grid-cols-3">
           {stats.map((stat, i) => (
             <GlassCard key={stat.label} delay={i * 0.1}>
-              <p className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              <p className="text-5xl font-bold tracking-tight text-[#163d2a] sm:text-6xl">
                 <AnimatedCounter
                   end={stat.end}
                   suffix={stat.suffix}

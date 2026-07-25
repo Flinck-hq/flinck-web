@@ -20,7 +20,7 @@ export function Hero() {
   return (
     <section
       ref={ref}
-      className="relative min-h-screen overflow-hidden bg-white pt-28 pb-16 sm:pt-32 sm:pb-24"
+      className="relative min-h-screen overflow-hidden bg-[#f7f2e8] pt-28 pb-16 sm:pt-32 sm:pb-24"
     >
       <GradientBackground />
 
@@ -31,7 +31,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary">
+            <span className="inline-flex items-center rounded-full border border-[#163d2a]/15 bg-[#163d2a]/5 px-4 py-1.5 text-xs font-medium text-[#163d2a]">
               The digital ecosystem for agriculture
             </span>
           </motion.div>
@@ -44,7 +44,7 @@ export function Hero() {
           >
             Agriculture.
             <br />
-            <span className="bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#163d2a] to-[#1f7a45] bg-clip-text text-transparent">
               Reimagined.
             </span>
           </motion.h1>
@@ -69,12 +69,12 @@ export function Hero() {
               href={PLAY_STORE_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-primary px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-[#1d4ed8] active:scale-[0.97]"
+              className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-[#163d2a] px-8 text-base font-semibold text-white shadow-lg shadow-[#163d2a]/25 transition-all hover:bg-[#10281d] active:scale-[0.97]"
             >
               Download App
               <ArrowRight className="h-5 w-5" />
             </a>
-            <button className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-gray-200 bg-white px-8 text-base font-medium text-gray-700 transition-all hover:border-gray-300 hover:bg-gray-50 active:scale-[0.97]">
+            <button className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-gray-200 bg-white/80 px-8 text-base font-medium text-gray-700 transition-all hover:border-gray-300 hover:bg-white active:scale-[0.97]">
               <PlayCircle className="h-5 w-5" />
               Watch Demo
             </button>
@@ -92,7 +92,7 @@ export function Hero() {
       </div>
 
       <div
-        className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"
+        className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#f7f2e8] to-transparent"
       />
     </section>
   );

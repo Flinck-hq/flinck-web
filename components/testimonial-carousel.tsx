@@ -14,9 +14,9 @@ export function TestimonialCarousel() {
   const t = testimonials[current];
 
   return (
-    <section className="bg-white py-24 sm:py-32">
+    <section className="bg-[#f7f2e8] py-24 sm:py-32">
       <div className="mx-auto max-w-4xl px-5 sm:px-8 lg:px-12">
-        <p className="mb-12 text-center text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+        <p className="mb-12 text-center text-xs font-semibold uppercase tracking-[0.2em] text-[#1f7a45]">
           Testimonials
         </p>
 
@@ -32,14 +32,14 @@ export function TestimonialCarousel() {
             >
               <div className="flex justify-center gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                  <Star key={i} className="h-5 w-5 fill-[#1f7a45] text-[#1f7a45]" />
                 ))}
               </div>
               <p className="mx-auto mt-8 max-w-3xl text-balance text-2xl font-medium leading-relaxed text-gray-900 sm:text-3xl sm:leading-relaxed">
                 &ldquo;{t.quote}&rdquo;
               </p>
               <div className="mt-10 flex items-center justify-center gap-4">
-                <div className="h-12 w-12 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-white font-bold text-lg">
+                <div className="h-12 w-12 rounded-full bg-gradient-to-br from-[#163d2a] to-[#1f7a45] flex items-center justify-center text-white font-bold text-lg">
                   {t.name.charAt(0)}
                 </div>
                 <div className="text-left">
@@ -67,7 +67,7 @@ export function TestimonialCarousel() {
                   onClick={() => setCurrent(i)}
                   className={`h-2 w-2 rounded-full transition-all ${
                     i === current
-                      ? "w-6 bg-primary"
+                      ? "w-6 bg-[#163d2a]"
                       : "bg-gray-300 hover:bg-gray-400"
                   }`}
                   aria-label={`Go to testimonial ${i + 1}`}

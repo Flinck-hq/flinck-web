@@ -10,7 +10,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-[#FBFBFD] py-24 sm:py-32">
+    <section className="bg-[#f5f0e5] py-24 sm:py-32">
       <div className="mx-auto max-w-3xl px-5 sm:px-8 lg:px-12">
         <SectionTitle
           eyebrow="FAQ"
@@ -26,8 +26,8 @@ export function FAQ() {
                 key={i}
                 className={`rounded-2xl border transition-all ${
                   isOpen
-                    ? "border-primary/20 bg-white shadow-sm"
-                    : "border-gray-100 bg-white/50"
+                    ? "border-[#163d2a]/15 bg-white shadow-sm"
+                    : "border-gray-100 bg-white/60"
                 }`}
               >
                 <button

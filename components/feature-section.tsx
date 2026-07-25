@@ -26,7 +26,7 @@ export function FeatureSection({
   imageSrc,
   imageAlt,
   reversed = false,
-  bgColor = "bg-white",
+  bgColor = "bg-[#f7f2e8]",
   ctaText,
   ctaHref,
 }: FeatureSectionProps) {
@@ -63,7 +63,7 @@ export function FeatureSection({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-primary"
+              className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#1f7a45]"
             >
               {eyebrow}
             </motion.p>
@@ -95,7 +95,7 @@ export function FeatureSection({
               >
                 <a
                   href={ctaHref}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-[#1d4ed8]"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#163d2a] transition-colors hover:text-[#10281d]"
                 >
                   {ctaText}
                   <ArrowRight className="h-4 w-4" />

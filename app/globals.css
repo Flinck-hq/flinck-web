@@ -4,13 +4,14 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
+  --background: #f7f2e8;
   --foreground: #111827;
-  --primary: #2563EB;
-  --primary-light: #3B82F6;
+  --primary: #163d2a;
+  --primary-light: #1f7a45;
+  --accent: #d6f277;
   --secondary: #6B7280;
-  --muted: #F5F7FA;
-  --muted-alt: #FBFBFD;
+  --muted: #f5f0e5;
+  --muted-alt: #f8f5ee;
   --border: rgba(0, 0, 0, 0.08);
 }
 
@@ -20,6 +21,7 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-light: var(--primary-light);
+  --color-accent: var(--accent);
   --color-secondary: var(--secondary);
   --color-muted: var(--muted);
   --color-muted-alt: var(--muted-alt);
@@ -34,13 +36,13 @@
   }
 
   body {
-    background: #ffffff;
+    background: #f7f2e8;
     color: #111827;
     overflow-x: hidden;
   }
 
   ::selection {
-    background: #2563EB;
+    background: #163d2a;
     color: white;
   }
 }

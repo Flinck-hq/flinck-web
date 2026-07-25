@@ -16,7 +16,7 @@ export function WhyFlinck() {
   const imageY = useTransform(scrollYProgress, [0, 1], [60, -60]);
 
   return (
-    <section ref={ref} className="relative overflow-hidden bg-white py-24 sm:py-32">
+    <section ref={ref} className="relative overflow-hidden bg-[#f7f2e8] py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
         <SectionTitle
           eyebrow="Why Flinck"

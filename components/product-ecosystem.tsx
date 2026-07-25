@@ -33,7 +33,7 @@ export function ProductEcosystem() {
   return (
     <section
       ref={containerRef}
-      className="relative overflow-hidden bg-[#F5F7FA] py-24 sm:py-32"
+      className="relative overflow-hidden bg-[#f5f0e5] py-24 sm:py-32"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
         <SectionTitle
@@ -49,9 +49,9 @@ export function ProductEcosystem() {
             <motion.div
               key={`${item.label}-${i}`}
               whileHover={{ scale: 1.03, y: -8 }}
-              className="group flex min-w-[260px] flex-col items-center rounded-3xl border border-gray-100 bg-white p-8 shadow-sm transition-shadow hover:shadow-xl sm:min-w-[300px]"
+              className="group flex min-w-[260px] flex-col items-center rounded-3xl border border-[#163d2a]/8 bg-white/80 p-8 shadow-sm transition-shadow hover:shadow-xl sm:min-w-[300px]"
             >
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#eff8e7] text-[#163d2a] transition-colors group-hover:bg-[#163d2a] group-hover:text-white">
                 <item.icon className="h-7 w-7" />
               </div>
               <p className="mt-5 text-xl font-bold text-gray-900">

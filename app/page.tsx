@@ -11,7 +11,7 @@ import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#f7f2e8]">
       <Navbar />
 
       <Hero />
@@ -37,7 +37,7 @@ export default function Home() {
         imageSrc="/marketplace-vibe.png"
         imageAlt="Flinck Weather Intelligence"
         reversed
-        bgColor="bg-[#FBFBFD]"
+        bgColor="bg-[#f5f0e5]"
         ctaText="See Weather Features"
         ctaHref="/how-it-works"
       />
@@ -61,7 +61,7 @@ export default function Home() {
         imageSrc="/farmer-lifestyle.png"
         imageAlt="Flinck Community"
         reversed
-        bgColor="bg-[#F5F7FA]"
+        bgColor="bg-[#f7f2e8]"
         ctaText="Join the Community"
         ctaHref="/how-it-works"
       />

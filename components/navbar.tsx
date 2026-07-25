@@ -39,7 +39,7 @@ export function Navbar() {
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/75 backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.06)]"
+          ? "bg-[#f7f2e8]/80 backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.06)]"
           : "bg-transparent"
       }`}
     >
@@ -74,7 +74,7 @@ export function Navbar() {
             href={PLAY_STORE_URL}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex h-9 items-center rounded-full bg-primary px-5 text-sm font-medium text-white transition-all hover:bg-[#1d4ed8] active:scale-[0.97]"
+            className="inline-flex h-9 items-center rounded-full bg-[#163d2a] px-5 text-sm font-medium text-white transition-all hover:bg-[#10281d] active:scale-[0.97]"
           >
             Get Started
           </a>
@@ -95,7 +95,7 @@ export function Navbar() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="absolute inset-x-0 top-full border-t border-gray-100 bg-white/95 backdrop-blur-xl md:hidden"
+          className="absolute inset-x-0 top-full border-t border-gray-100 bg-[#f7f2e8]/95 backdrop-blur-xl md:hidden"
         >
           <div className="space-y-1 px-5 py-6">
             {navLinks.map((link) => (
@@ -103,7 +103,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="block rounded-2xl px-4 py-3 text-base font-medium text-gray-700 transition-colors hover:bg-gray-50"
+                className="block rounded-2xl px-4 py-3 text-base font-medium text-gray-700 transition-colors hover:bg-white/70"
               >
                 {link.label}
               </Link>
@@ -114,7 +114,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => setMenuOpen(false)}
-                className="flex h-12 items-center justify-center rounded-full bg-primary text-base font-medium text-white"
+                className="flex h-12 items-center justify-center rounded-full bg-[#163d2a] text-base font-medium text-white"
               >
                 Get Started
               </a>

@@ -14,7 +14,7 @@ const footerLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-gray-100 bg-white">
+    <footer className="border-t border-[#163d2a]/8 bg-[#f7f2e8]">
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12">
         <div className="flex flex-col items-center gap-8 text-center sm:flex-row sm:items-start sm:justify-between sm:text-left">
           <div className="max-w-xs">
@@ -95,7 +95,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-gray-100 pt-8 text-center text-sm text-gray-400">
+        <div className="mt-12 border-t border-[#163d2a]/8 pt-8 text-center text-sm text-gray-400">
           <p>&copy; {new Date().getFullYear()} Flinck. All rights reserved.</p>
         </div>
       </div>
