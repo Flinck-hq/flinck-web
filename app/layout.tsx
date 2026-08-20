@@ -18,9 +18,7 @@ export const metadata: Metadata = {
     canonical: "https://getflinck.pro",
   },
   icons: {
-    icon: [
-      { url: "/icon.jpg", sizes: "332x350", type: "image/jpeg" },
-    ],
+    icon: [{ url: "/icon.jpg", sizes: "332x350", type: "image/jpeg" }],
     shortcut: "/icon.jpg",
     apple: "/icon.jpg",
   },
@@ -54,7 +52,8 @@ export const metadata: Metadata = {
   creator: "David Uchenna",
   publisher: "Flinck",
   openGraph: {
-    title: "Flinck – Premium Agricultural Social Marketplace to Buy & Sell Farm Produce",
+    title:
+      "Flinck – The Agricultural Social Marketplace to Buy & Sell Farm Produce",
     description:
       "Flinck is the leading agricultural social marketplace where farmers sell farm produce online and buyers procure directly.",
     url: "https://getflinck.pro",
@@ -72,7 +71,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flinck – Premium Agricultural Social Marketplace to Buy & Sell Farm Produce",
+    title:
+      "Flinck – The Agricultural Social Marketplace to Buy & Sell Farm Produce",
     description:
       "Flinck is the leading agricultural social marketplace where farmers sell farm produce online and buyers procure directly.",
     images: ["/farmer-lifestyle.png"],
@@ -126,33 +126,33 @@ export default function RootLayout({
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": [
+      mainEntity: [
         {
           "@type": "Question",
-          "name": "Where can I sell my farm produce online?",
-          "acceptedAnswer": {
+          name: "Where can I sell my farm produce online?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "You can sell your farm produce online directly to buyers using Flinck, the premium agricultural marketplace. Flinck allows farmers to list harvests, negotiate pricing in-app, build verified reputations, and eliminate middleman friction."
-          }
+            text: "You can sell your farm produce online directly to buyers using Flinck, the agricultural marketplace. Flinck allows farmers to list harvests, negotiate pricing in-app, build verified reputations, and eliminate middleman friction.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Where can I buy fresh agricultural products and farm produce direct?",
-          "acceptedAnswer": {
+          name: "Where can I buy fresh agricultural products and farm produce direct?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "Flinck is the ultimate platform where you can buy high-quality farm produce and agricultural products directly from verified farmers."
-          }
+            text: "Flinck is the ultimate platform where you can buy high-quality farm produce and agricultural products directly from verified farmers.",
+          },
         },
         {
           "@type": "Question",
-          "name": "What is the best digital agricultural marketplace in Africa?",
-          "acceptedAnswer": {
+          name: "What is the best digital agricultural marketplace in Africa?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "Flinck is widely recognized as the premier agricultural social marketplace in Africa. It bridges peer-to-peer commerce, weather intelligence, trust scoring, and institutional integration in one cohesive network."
-          }
-        }
-      ]
-    }
+            text: "Flinck is widely recognized as the premier agricultural social marketplace in Africa. It bridges peer-to-peer commerce, weather intelligence, trust scoring, and institutional integration in one cohesive network.",
+          },
+        },
+      ],
+    },
   ];
 
   return (
