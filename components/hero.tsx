@@ -74,10 +74,6 @@ export function Hero() {
               Download App
               <ArrowRight className="h-5 w-5" />
             </a>
-            <button className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-gray-200 bg-white/80 px-8 text-base font-medium text-gray-700 transition-all hover:border-gray-300 hover:bg-white active:scale-[0.97]">
-              <PlayCircle className="h-5 w-5" />
-              Watch Demo
-            </button>
           </motion.div>
         </motion.div>
 
@@ -91,9 +87,7 @@ export function Hero() {
         </motion.div>
       </div>
 
-      <div
-        className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#f7f2e8] to-transparent"
-      />
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#f7f2e8] to-transparent" />
     </section>
   );
 }

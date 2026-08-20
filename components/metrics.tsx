@@ -6,8 +6,7 @@ import { AnimatedCounter } from "./animated-counter";
 import { GlassCard } from "./glass-card";
 
 const stats = [
-  { end: 100, suffix: "+", label: "Farmers", desc: "Growing every day" },
-  { end: 1000, suffix: "+", label: "Products", desc: "Listed on marketplace" },
+  { end: 8000, suffix: "+", label: "Products", desc: "Listed on marketplace" },
   { end: 5, suffix: "+", label: "Communities", desc: "Across regions" },
 ];
 
